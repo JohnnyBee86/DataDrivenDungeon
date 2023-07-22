@@ -1,0 +1,75 @@
+
+Data Driven Dungeon Delver-
+
+Shops-
+Weapons and Armor (Stanley's Smithing)
+Magic supplies (Renaldo's Repository)
+Jasper's Jackpot (potion/fireball/+2hp/dungeon warp) - goblin emblems
+
+Dungeons-
+3? (early(6?)/mid(8?)/late(10?) game)
+
+Basic Gameplay -
+Player starts a run (can't enter higher area until previous has been cleared).
+
+Player can choose to heal with a potion(if they have one) or abandon run after each fight.
+
+Each boss can only be beaten once but areas can be repeated to grind.
+
+On death you lose any money/items gained that run.
+
+Before a run the player can choose to visit shops and whether or not they want to deposit remaing money or items in the bank to save for later.
+
+
+Player stats -
+starting armor - 25hp jeans and T-shirt
+starting damage - 1-2 dagger
+
+leather - 35hp
+chain-mail - 45hp
+plate - 60hp
+
+shortsword - 2-4
+longsword - 4-6
+greatsword - 6-9
+
+
+Items -
+potion - heals 10-15hp
+fireball - does 9 damage to a single targert
+
+Early game -
+
+Only 1 monster at a time
+
+	name		damage		drops		rare drop
+
+2hp	slimes		0-1		0-1		slime core (magic shop)
+
+4-5hp	goblin		1-2		1-3
+
+10-15hp	big spider	2-5		10		carapace (drop)
+
+Mid game -
+
+monsters can come in packs of 2 60(1)/40(2)
+
+	name		damage		drops		rare drop
+
+4-5hp	goblin		1-2		1-3
+
+5-8hp	goblin captain	2-4		3-6		goblin emblem (Jasper)
+
+15-20hp	goblin lord	3-5		10-20		goblin banner (drop)
+
+Late game -
+
+monsters will come in packs of 2, chance of 3 80(2)/20(3)
+
+	name		damage		drops		rare drop
+
+5-7hp	orc melee	2-4		3-6
+
+(back row)orc archer	1-2		1-3
+
+25-35hp	orc warmaster	4-6		200		Orc War Banner
