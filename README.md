@@ -1,5 +1,5 @@
 # Data Driven Dungeon Delver
- - A RPG running in Windows Forms powered by CRUD functionality and .NET 6
+ - A Role Playing Game running in Windows Forms powered by CRUD functionality and .NET 6
  - Written by Elias McKee and John Bartholomew
 
 ## Requirements
