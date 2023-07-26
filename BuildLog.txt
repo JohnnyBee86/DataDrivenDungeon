@@ -2,4 +2,7 @@
 	In class basic game outline written
 
 7/22 - JB/EM
-	weekend voice chat to create repository and started basic tasking
+	Weekend voice chat to create repository and started basic tasking
+
+7/25 - JB
+	Started database design
