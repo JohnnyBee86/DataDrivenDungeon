@@ -1,8 +1,8 @@
-7/19 - JB/EM
+7/19 - JB/EM 1hr
 	In class basic game outline written
 
-7/22 - JB/EM
+7/22 - JB/EM 1hr
 	Weekend voice chat to create repository and started basic tasking
 
-7/25 - JB
+7/25 - JB 2hr
 	Started database design
