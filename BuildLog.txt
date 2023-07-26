@@ -6,3 +6,7 @@
 
 7/25 - JB 2hr
 	Started database design
+
+7/26
+	- JB 1hr
+		Started database model scripting
