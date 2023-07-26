@@ -20,5 +20,15 @@ namespace DataDrivenDungeon.Views
         {
             InitializeComponent();
         }
+
+        // attack monsters
+
+        // use a potion
+
+        // use a fireball
+
+        // run from fight, return to hub form
+
+        // after fight, pop up a MessageBox with the loot drops
     }
 }

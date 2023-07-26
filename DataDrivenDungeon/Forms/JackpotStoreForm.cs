@@ -20,5 +20,9 @@ namespace DataDrivenDungeon
         {
             InitializeComponent();
         }
+
+        // use emblems to gamble for items
+
+        // leave the shop
     }
 }

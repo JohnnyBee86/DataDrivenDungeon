@@ -19,5 +19,17 @@ namespace DataDrivenDungeon
         {
             InitializeComponent();
         }
+
+        // connect to the smithing shop form
+
+        // connect to the repository shop form
+
+        // connect to the jackpot shop form
+
+        // connect to the bank
+
+        // close the program
+
+        // save the game as a JSON string?
     }
 }

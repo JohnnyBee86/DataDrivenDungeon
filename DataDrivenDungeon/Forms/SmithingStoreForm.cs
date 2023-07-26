@@ -20,5 +20,11 @@ namespace DataDrivenDungeon
         {
             InitializeComponent();
         }
+
+        // buy armor (progression based)
+
+        // buy weapon (progression based)
+
+        // leave the shop
     }
 }

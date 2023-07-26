@@ -20,5 +20,15 @@ namespace DataDrivenDungeon
         {
             InitializeComponent();
         }
+
+        // store items in bank
+
+        // remove items from bank
+
+        // store money in bank
+
+        // remove money from bank
+
+        // leave the bank
     }
 }

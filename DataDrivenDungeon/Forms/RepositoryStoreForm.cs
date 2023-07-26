@@ -20,5 +20,13 @@ namespace DataDrivenDungeon
         {
             InitializeComponent();
         }
+
+        // buy potions (random amount)
+
+        // buy fireballs (random amount)
+
+        // sell monster drops from inventory (and bank?)
+
+        // leave the shop
     }
 }
