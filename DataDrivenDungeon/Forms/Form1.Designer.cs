@@ -28,12 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            TitleLbl = new Label();
+            StartGameBtn = new Button();
+            SuspendLayout();
+            // 
+            // TitleLbl
+            // 
+            TitleLbl.AutoSize = true;
+            TitleLbl.Location = new Point(21, 34);
+            TitleLbl.Name = "TitleLbl";
+            TitleLbl.Size = new Size(239, 25);
+            TitleLbl.TabIndex = 0;
+            TitleLbl.Text = "Data Driven Dungeon Delver";
+            // 
+            // StartGameBtn
+            // 
+            StartGameBtn.Location = new Point(21, 100);
+            StartGameBtn.Name = "StartGameBtn";
+            StartGameBtn.Size = new Size(239, 68);
+            StartGameBtn.TabIndex = 1;
+            StartGameBtn.Text = "Start Game";
+            StartGameBtn.UseVisualStyleBackColor = true;
+            StartGameBtn.Click += StartGameBtn_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(284, 205);
+            Controls.Add(StartGameBtn);
+            Controls.Add(TitleLbl);
+            Name = "Form1";
+            Text = "DDDD";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label TitleLbl;
+        private Button StartGameBtn;
     }
 }

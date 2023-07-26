@@ -12,5 +12,16 @@ namespace DataDrivenDungeon
         }
 
         // connect to the hub form
+        /// <summary>
+        /// The button that links to the hub world.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void StartGameBtn_Click(object sender, EventArgs e)
+        {
+            HubForm hubForm = new HubForm();
+            hubForm.ShowDialog();
+        }
+
     }
 }
