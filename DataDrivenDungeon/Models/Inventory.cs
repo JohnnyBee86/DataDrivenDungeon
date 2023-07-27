@@ -25,5 +25,7 @@ namespace DataDrivenDungeon.Models
         public short Fireballs { get; set; }
 
         public short BankedFireballs { get; set; }
+
+        public short Emblems { get; set; }
     }
 }
