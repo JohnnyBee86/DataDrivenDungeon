@@ -28,12 +28,45 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "JackpotStoreForm";
+            RickBtn = new Button();
+            HubBtn = new Button();
+            SuspendLayout();
+            // 
+            // RickBtn
+            // 
+            RickBtn.Location = new Point(12, 12);
+            RickBtn.Name = "RickBtn";
+            RickBtn.Size = new Size(262, 108);
+            RickBtn.TabIndex = 0;
+            RickBtn.Text = "Take a Risk (Goblin Emblem)";
+            RickBtn.UseVisualStyleBackColor = true;
+            RickBtn.Click += RickBtn_Click;
+            // 
+            // HubBtn
+            // 
+            HubBtn.Location = new Point(280, 12);
+            HubBtn.Name = "HubBtn";
+            HubBtn.Size = new Size(262, 108);
+            HubBtn.TabIndex = 1;
+            HubBtn.Text = "Leave Shop";
+            HubBtn.UseVisualStyleBackColor = true;
+            HubBtn.Click += HubBtn_Click;
+            // 
+            // JackpotStoreForm
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(HubBtn);
+            Controls.Add(RickBtn);
+            Name = "JackpotStoreForm";
+            Text = "JackpotStoreForm";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button RickBtn;
+        private Button HubBtn;
     }
 }

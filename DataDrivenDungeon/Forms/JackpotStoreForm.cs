@@ -21,8 +21,16 @@ namespace DataDrivenDungeon
             InitializeComponent();
         }
 
-        // use emblems to gamble for items
+        private void RickBtn_Click(object sender, EventArgs e)
+        {
+            // use emblems to gamble for items
+            MessageBox.Show("You did a thing!");
+        }
 
-        // leave the shop
+        private void HubBtn_Click(object sender, EventArgs e)
+        {
+            // leave the shop
+            Close();
+        }
     }
 }
