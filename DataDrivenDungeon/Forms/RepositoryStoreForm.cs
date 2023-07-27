@@ -21,12 +21,25 @@ namespace DataDrivenDungeon
             InitializeComponent();
         }
 
-        // buy potions (random amount)
+        private void PotionBtn_Click(object sender, EventArgs e)
+        {
+            // buy potions (random amount)
+        }
 
-        // buy fireballs (random amount)
+        private void FireBallBtn_Click(object sender, EventArgs e)
+        {
+            // buy fireballs (random amount)
+        }
 
-        // sell monster drops from inventory (and bank?)
+        private void HubBtn_Click(object sender, EventArgs e)
+        {
+            // leave the shop
+            Close();
+        }
 
-        // leave the shop
+        private void SellBtn_Click(object sender, EventArgs e)
+        {
+            // sell monster drops from inventory (and bank?)
+        }
     }
 }
