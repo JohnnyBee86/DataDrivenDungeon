@@ -6,3 +6,6 @@
 
 7/25 - JB 2hr
 	Started database design
+
+7/26 - EM 2hr
+	Created and linked the winforms for the game
