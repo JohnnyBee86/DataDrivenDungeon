@@ -7,17 +7,35 @@ using System.Threading.Tasks;
 
 namespace DataDrivenDungeon.Models
 {
+    /// <summary>
+    /// Represents a single in game weapon
+    /// </summary>
     internal class Weapon
     {
+        /// <summary>
+        /// The weapon's unique identifier
+        /// </summary>
         [Key]
         public int WeaponId { get; set; }
 
+        /// <summary>
+        /// The weapon's name
+        /// </summary>
         public string WeaponName { get; set; }
 
+        /// <summary>
+        /// The weapon's cost in game
+        /// </summary>
         public short WeaponCost { get; set; }
 
-        public short DamageMinimum { get; set; }
+        /// <summary>
+        /// The minimum damage the weapon can deal
+        /// </summary>
+        public short DamageMin { get; set; }
 
-        public short DamageMaximum { get; set;}
+        /// <summary>
+        /// The maximum damage the weapon can deal
+        /// </summary>
+        public short DamageMax { get; set;}
     }
 }

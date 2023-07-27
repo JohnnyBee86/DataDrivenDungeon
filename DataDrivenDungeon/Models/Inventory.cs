@@ -7,25 +7,55 @@ using System.Threading.Tasks;
 
 namespace DataDrivenDungeon.Models
 {
+    /// <summary>
+    /// Represents the player inventory of a single game
+    /// </summary>
     internal class Inventory
     {
+        /// <summary>
+        /// The inventories unique identifier
+        /// </summary>
         [Key]
         public int InventoryId { get; set; }
 
+        /// <summary>
+        /// The game the inventory belongs to
+        /// </summary>
         public GameData SaveData { get; set; }
 
+        /// <summary>
+        /// How much money the player is carrying
+        /// </summary>
         public short Coins { get; set; }
 
+        /// <summary>
+        /// How much money the player has in their bank
+        /// </summary>
         public short BankedCoins { get; set; }
 
+        /// <summary>
+        /// How many potions the player is carrying
+        /// </summary>
         public short Potions { get; set; }
 
+        /// <summary>
+        /// How many potions the player has in their bank
+        /// </summary>
         public short BankedPotions { get; set; }
 
+        /// <summary>
+        /// How many fireballs the player is carrying
+        /// </summary>
         public short Fireballs { get; set; }
 
+        /// <summary>
+        /// How many fireballs the player has in their bank
+        /// </summary>
         public short BankedFireballs { get; set; }
 
+        /// <summary>
+        /// How many dropped emblems the player is carrying 
+        /// </summary>
         public short Emblems { get; set; }
     }
 }
