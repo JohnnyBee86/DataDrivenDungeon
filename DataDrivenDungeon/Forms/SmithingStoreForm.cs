@@ -21,10 +21,22 @@ namespace DataDrivenDungeon
             InitializeComponent();
         }
 
-        // buy armor (progression based)
+        private void BuySwordBtn_Click(object sender, EventArgs e)
+        {
+            // buy weapon (progression based)
+            MessageBox.Show("You got a new weapon!");
+        }
 
-        // buy weapon (progression based)
+        private void BuyArmorBtn_Click(object sender, EventArgs e)
+        {
+            // buy armor (progression based)
+            MessageBox.Show("You got new armor!");
+        }
 
-        // leave the shop
+        private void HubBtn_Click(object sender, EventArgs e)
+        {
+            // leave the shop
+            Close();
+        }
     }
 }

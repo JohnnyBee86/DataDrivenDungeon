@@ -35,7 +35,7 @@
             // TitleLbl
             // 
             TitleLbl.AutoSize = true;
-            TitleLbl.Location = new Point(21, 34);
+            TitleLbl.Location = new Point(119, 34);
             TitleLbl.Name = "TitleLbl";
             TitleLbl.Size = new Size(239, 25);
             TitleLbl.TabIndex = 0;
@@ -43,7 +43,7 @@
             // 
             // StartGameBtn
             // 
-            StartGameBtn.Location = new Point(21, 100);
+            StartGameBtn.Location = new Point(119, 100);
             StartGameBtn.Name = "StartGameBtn";
             StartGameBtn.Size = new Size(239, 68);
             StartGameBtn.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(284, 205);
+            ClientSize = new Size(477, 205);
             Controls.Add(StartGameBtn);
             Controls.Add(TitleLbl);
             Name = "Form1";

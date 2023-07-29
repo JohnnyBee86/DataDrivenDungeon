@@ -24,11 +24,13 @@ namespace DataDrivenDungeon
         private void PotionBtn_Click(object sender, EventArgs e)
         {
             // buy potions (random amount)
+            MessageBox.Show("You bought a potion.");
         }
 
         private void FireBallBtn_Click(object sender, EventArgs e)
         {
             // buy fireballs (random amount)
+            MessageBox.Show("You bought a fireball.");
         }
 
         private void HubBtn_Click(object sender, EventArgs e)
@@ -40,6 +42,7 @@ namespace DataDrivenDungeon
         private void SellBtn_Click(object sender, EventArgs e)
         {
             // sell monster drops from inventory (and bank?)
+            MessageBox.Show("You sold {itemsSold} for {goldEarned}.");
         }
     }
 }

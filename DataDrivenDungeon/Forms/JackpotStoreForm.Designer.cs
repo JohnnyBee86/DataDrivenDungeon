@@ -34,7 +34,7 @@
             // 
             // RickBtn
             // 
-            RickBtn.Location = new Point(12, 12);
+            RickBtn.Location = new Point(62, 307);
             RickBtn.Name = "RickBtn";
             RickBtn.Size = new Size(262, 108);
             RickBtn.TabIndex = 0;
@@ -44,7 +44,7 @@
             // 
             // HubBtn
             // 
-            HubBtn.Location = new Point(280, 12);
+            HubBtn.Location = new Point(474, 307);
             HubBtn.Name = "HubBtn";
             HubBtn.Size = new Size(262, 108);
             HubBtn.TabIndex = 1;
