@@ -10,7 +10,7 @@ namespace DataDrivenDungeon.Models
     /// <summary>
     /// Represents a single Game
     /// </summary>
-    internal class GameData
+    public class GameData
     {
         /// <summary>
         /// The game's unique identifier

@@ -10,7 +10,7 @@ namespace DataDrivenDungeon.Models
     /// <summary>
     /// Represents a single in game armor
     /// </summary>
-    internal class Armor
+    public class Armor
     {
         /// <summary>
         /// The armor's unique identifier

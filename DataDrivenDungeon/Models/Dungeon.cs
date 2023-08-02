@@ -10,7 +10,7 @@ namespace DataDrivenDungeon.Models
     /// <summary>
     /// Represents a single dungeon in the game
     /// </summary>
-    internal class Dungeon
+    public class Dungeon
     {
         /// <summary>
         /// The dungeon's unique identifier

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataDrivenDungeon.Data
 {
-    internal class GameContext : DbContext
+    public class GameContext : DbContext
     {
         public GameContext(DbContextOptions<GameContext> options) : base(options)
         {

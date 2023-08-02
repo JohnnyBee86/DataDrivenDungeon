@@ -10,7 +10,7 @@ namespace DataDrivenDungeon.Models
     /// <summary>
     /// Represents the player inventory of a single game
     /// </summary>
-    internal class Inventory
+    public class Inventory
     {
         /// <summary>
         /// The inventories unique identifier

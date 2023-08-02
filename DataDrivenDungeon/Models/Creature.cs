@@ -10,7 +10,7 @@ namespace DataDrivenDungeon.Models
     /// <summary>
     /// Represents a single enemy creature in the game
     /// </summary>
-    internal class Creature
+    public class Creature
     {
         /// <summary>
         /// The creature's unique indentifier
@@ -66,7 +66,7 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The extra item a creature can drop, if any
         /// </summary>
-        public string BonusDrop { get; set; }
+        public string? BonusDrop { get; set; }
 
         /// <summary>
         /// The chance of the creature dropping its bonus item

@@ -10,7 +10,7 @@ namespace DataDrivenDungeon.Models
     /// <summary>
     /// Represents a single in game weapon
     /// </summary>
-    internal class Weapon
+    public class Weapon
     {
         /// <summary>
         /// The weapon's unique identifier
