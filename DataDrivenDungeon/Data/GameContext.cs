@@ -10,6 +10,14 @@ namespace DataDrivenDungeon.Data
 {
     public class GameContext : DbContext
     {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=DungeonGame");
+            }
+        }
+
         public GameContext(DbContextOptions<GameContext> options) : base(options)
         {
 
