@@ -18,10 +18,7 @@ namespace DataDrivenDungeon.Data
             }
         }
 
-        public GameContext(DbContextOptions<GameContext> options) : base(options)
-        {
-
-        }
+        public GameContext() { }
 
         public DbSet<Weapon> Weapons { get; set; }
         public DbSet<Armor> Armors { get; set; }
