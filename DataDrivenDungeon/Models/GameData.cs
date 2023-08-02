@@ -21,18 +21,18 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The name of the game's player
         /// </summary>
-        [StringLength(15, MinimumLength =1)]
-        public string PlayerName { get; set; }
+        [StringLength(15, MinimumLength = 1)]
+        public string PlayerName { get; set; } = null!;
 
         /// <summary>
         /// The player's current weapon
         /// </summary>
-        public Weapon CurrentWeapon { get; set; }
+        public Weapon CurrentWeapon { get; set; } = null!;
 
         /// <summary>
         /// The player's current armor
         /// </summary>
-        public Armor CurrentArmor { get; set; }
+        public Armor CurrentArmor { get; set; } = null!;
 
         /// <summary>
         /// The player's health before any armor bonus
@@ -42,6 +42,6 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The highest level dungeon the player may enter
         /// </summary>
-        public Dungeon HighestDungeonAllowed { get; set; }
+        public Dungeon HighestDungeonAllowed { get; set; } = null!;
     }
 }

@@ -21,7 +21,7 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The weapon's name
         /// </summary>
-        public string WeaponName { get; set; }
+        public string WeaponName { get; set; } = null!;
 
         /// <summary>
         /// The weapon's cost in game

@@ -21,7 +21,7 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The armor's name
         /// </summary>
-        public string ArmorName { get; set; }
+        public string ArmorName { get; set; } = null!;
 
         /// <summary>
         /// The armor's cost in game

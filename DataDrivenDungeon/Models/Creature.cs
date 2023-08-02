@@ -21,12 +21,12 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// What dungeon this creature appears in
         /// </summary>
-        public Dungeon FightInDungeon { get; set; }
+        public Dungeon FightInDungeon { get; set; } = null!;
 
         /// <summary>
         /// The creature's name
         /// </summary>
-        public string CreatureName { get; set; }
+        public string CreatureName { get; set; } = null!;
 
         /// <summary>
         /// Is the creature a dungeon boss

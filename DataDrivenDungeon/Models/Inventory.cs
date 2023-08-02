@@ -21,7 +21,7 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The game the inventory belongs to
         /// </summary>
-        public GameData SaveData { get; set; }
+        public GameData SaveData { get; set; } = null!;
 
         /// <summary>
         /// How much money the player is carrying
