@@ -7,6 +7,8 @@
 7/25 - JB 2hr
 	Started database design
 
-7/26
-	- JB 1hr
-		Started database model scripting
+7/26 - JB 1hr
+	Started database model scripting
+
+8/2 - JB 2hr
+	Finished databse model scripting, context class, connection string, and merged with main
