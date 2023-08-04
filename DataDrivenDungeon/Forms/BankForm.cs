@@ -21,34 +21,59 @@ namespace DataDrivenDungeon
             InitializeComponent();
         }
 
-        private void HubBtn_Click(object sender, EventArgs e)
-        {
-            // leave the bank
-            Close();
-        }
-
+        /// <summary>
+        /// Takes items from your inventory and stores them in the bank vault.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DepositItemsBtn_Click(object sender, EventArgs e)
         {
             // store items in bank
             MessageBox.Show("Items put in storage.");
         }
 
-        private void WithdrawBtn_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Takes items from the bank storage and puts them into your inventory.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void WithdrawItemsBtn_Click(object sender, EventArgs e)
         {
             // remove items from bank
             MessageBox.Show("Items removed from storage.");
         }
 
+        /// <summary>
+        /// Takes money from your inventory and puts it into the bank vault.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DepositMoneyBtn_Click(object sender, EventArgs e)
         {
             // store money in bank
             MessageBox.Show("Money stored in the vault.");
         }
 
+        /// <summary>
+        /// Takes money from the bank vault and puts it into your inventory.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void WithdrawMoneyBtn_Click(object sender, EventArgs e)
         {
             // remove money from bank
             MessageBox.Show("Money removed from the vault.");
+        }
+
+        /// <summary>
+        /// Closes the form and takes you back to the Hub Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void HubBtn_Click(object sender, EventArgs e)
+        {
+            // leave the bank
+            Close();
         }
     }
 }

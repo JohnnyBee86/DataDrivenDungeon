@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            RickBtn = new Button();
+            RiskBtn = new Button();
             HubBtn = new Button();
             SuspendLayout();
             // 
-            // RickBtn
+            // RiskBtn
             // 
-            RickBtn.Location = new Point(62, 307);
-            RickBtn.Name = "RickBtn";
-            RickBtn.Size = new Size(262, 108);
-            RickBtn.TabIndex = 0;
-            RickBtn.Text = "Take a Risk (Goblin Emblem)";
-            RickBtn.UseVisualStyleBackColor = true;
-            RickBtn.Click += RickBtn_Click;
+            RiskBtn.Location = new Point(62, 307);
+            RiskBtn.Name = "RiskBtn";
+            RiskBtn.Size = new Size(262, 108);
+            RiskBtn.TabIndex = 0;
+            RiskBtn.Text = "Take a Risk (Goblin Emblem)";
+            RiskBtn.UseVisualStyleBackColor = true;
+            RiskBtn.Click += RiskBtn_Click;
             // 
             // HubBtn
             // 
@@ -58,15 +58,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(HubBtn);
-            Controls.Add(RickBtn);
+            Controls.Add(RiskBtn);
             Name = "JackpotStoreForm";
-            Text = "JackpotStoreForm";
+            Text = "Jasper's Jackpot";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button RickBtn;
+        private Button RiskBtn;
         private Button HubBtn;
     }
 }

@@ -21,6 +21,11 @@ namespace DataDrivenDungeon
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Takes you to the Bank Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void BankBtn_Click(object sender, EventArgs e)
         {
             // connect to the bank
@@ -28,6 +33,11 @@ namespace DataDrivenDungeon
             bankForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Takes you to the Jackpot Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void JackpotBtn_Click(object sender, EventArgs e)
         {
             // connect to the jackpot shop form
@@ -35,6 +45,11 @@ namespace DataDrivenDungeon
             jackpotStoreForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Takes you to the Repository Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RepositoryBtn_Click(object sender, EventArgs e)
         {
             // connect to the repository shop form
@@ -42,6 +57,11 @@ namespace DataDrivenDungeon
             repositoryStoreForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Takes you to the Smithing Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SmithingBtn_Click(object sender, EventArgs e)
         {
             // connect to the smithing shop form
@@ -49,6 +69,11 @@ namespace DataDrivenDungeon
             smithingStoreForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Takes you to the Dungeon Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DungeonBtn_Click(object sender, EventArgs e)
         {
             // connect to the dungeon form
@@ -56,6 +81,11 @@ namespace DataDrivenDungeon
             dungeonForm.ShowDialog();
         }
 
+        /// <summary>
+        /// Closes the form and takes you back to the Home Form.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void QuitBtn_Click(object sender, EventArgs e)
         {
             // close the program

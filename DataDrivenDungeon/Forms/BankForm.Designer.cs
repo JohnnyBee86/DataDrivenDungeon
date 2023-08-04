@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             DepositItemsBtn = new Button();
-            WithdrawBtn = new Button();
+            WithdrawItemsBtn = new Button();
             DepositMoneyBtn = new Button();
             WithdrawMoneyBtn = new Button();
             HubBtn = new Button();
@@ -51,15 +51,15 @@
             DepositItemsBtn.UseVisualStyleBackColor = true;
             DepositItemsBtn.Click += DepositItemsBtn_Click;
             // 
-            // WithdrawBtn
+            // WithdrawItemsBtn
             // 
-            WithdrawBtn.Location = new Point(198, 232);
-            WithdrawBtn.Name = "WithdrawBtn";
-            WithdrawBtn.Size = new Size(157, 89);
-            WithdrawBtn.TabIndex = 1;
-            WithdrawBtn.Text = "Withdraw Items";
-            WithdrawBtn.UseVisualStyleBackColor = true;
-            WithdrawBtn.Click += WithdrawBtn_Click;
+            WithdrawItemsBtn.Location = new Point(198, 232);
+            WithdrawItemsBtn.Name = "WithdrawItemsBtn";
+            WithdrawItemsBtn.Size = new Size(157, 89);
+            WithdrawItemsBtn.TabIndex = 1;
+            WithdrawItemsBtn.Text = "Withdraw Items";
+            WithdrawItemsBtn.UseVisualStyleBackColor = true;
+            WithdrawItemsBtn.Click += WithdrawItemsBtn_Click;
             // 
             // DepositMoneyBtn
             // 
@@ -133,7 +133,7 @@
             Controls.Add(HubBtn);
             Controls.Add(WithdrawMoneyBtn);
             Controls.Add(DepositMoneyBtn);
-            Controls.Add(WithdrawBtn);
+            Controls.Add(WithdrawItemsBtn);
             Controls.Add(DepositItemsBtn);
             Name = "BankForm";
             Text = "BankForm";
@@ -145,7 +145,7 @@
         #endregion
 
         private Button DepositItemsBtn;
-        private Button WithdrawBtn;
+        private Button WithdrawItemsBtn;
         private Button DepositMoneyBtn;
         private Button WithdrawMoneyBtn;
         private Button HubBtn;
