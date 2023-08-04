@@ -21,14 +21,34 @@ namespace DataDrivenDungeon
             InitializeComponent();
         }
 
-        // store items in bank
+        private void HubBtn_Click(object sender, EventArgs e)
+        {
+            // leave the bank
+            Close();
+        }
 
-        // remove items from bank
+        private void DepositItemsBtn_Click(object sender, EventArgs e)
+        {
+            // store items in bank
+            MessageBox.Show("Items put in storage.");
+        }
 
-        // store money in bank
+        private void WithdrawBtn_Click(object sender, EventArgs e)
+        {
+            // remove items from bank
+            MessageBox.Show("Items removed from storage.");
+        }
 
-        // remove money from bank
+        private void DepositMoneyBtn_Click(object sender, EventArgs e)
+        {
+            // store money in bank
+            MessageBox.Show("Money stored in the vault.");
+        }
 
-        // leave the bank
+        private void WithdrawMoneyBtn_Click(object sender, EventArgs e)
+        {
+            // remove money from bank
+            MessageBox.Show("Money removed from the vault.");
+        }
     }
 }
