@@ -21,14 +21,51 @@ namespace DataDrivenDungeon.Views
             InitializeComponent();
         }
 
-        // attack monsters
+        private void AttackBtn_Click(object sender, EventArgs e)
+        {
+            // attack monsters (pseudo-code)
+            /*foreach (var monsterRdb in MonsterGrb)
+            {
+                if (monsterRdb.Checked)
+                {
+                    Attack(monsterRdb);
+                    DoMonstersRemain();
+                }
+            }*/
+            throw new NotImplementedException();
+        }
 
-        // use a potion
+        private void FireballBtn_Click(object sender, EventArgs e)
+        {
+            // use a fireball (pseudo-code)
+            /*foreach (var monsterRdb in MonsterGrb)
+            {
+                if (monsterRdb.Checked)
+                {
+                    Fireball(monsterRdb);
+                    DoMonstersRemain();
+                }
+            }*/
+            throw new NotImplementedException();
+        }
 
-        // use a fireball
+        private void PotionBtn_Click(object sender, EventArgs e)
+        {
+            // use a potion
+            // Potion();
+            throw new NotImplementedException();
+        }
 
-        // run from fight, return to hub form
+        private void RetreatBtn_Click(object sender, EventArgs e)
+        {
+            // run from fight, return to hub form
+            Close();
+        }
 
-        // after fight, pop up a MessageBox with the loot drops
+        private bool DoMonstersRemain() 
+        {
+            // after fight, pop up a MessageBox with the loot drops
+            throw new NotImplementedException();
+        }
     }
 }
