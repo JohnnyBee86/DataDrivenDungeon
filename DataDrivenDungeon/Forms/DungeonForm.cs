@@ -32,7 +32,7 @@ namespace DataDrivenDungeon.Views
                     DoMonstersRemain();
                 }
             }*/
-            throw new NotImplementedException();
+            MessageBox.Show("You hit the monster.");
         }
 
         private void FireballBtn_Click(object sender, EventArgs e)
@@ -46,19 +46,20 @@ namespace DataDrivenDungeon.Views
                     DoMonstersRemain();
                 }
             }*/
-            throw new NotImplementedException();
+            MessageBox.Show("You threw the fireball at the monster.");
         }
 
         private void PotionBtn_Click(object sender, EventArgs e)
         {
             // use a potion
             // Potion();
-            throw new NotImplementedException();
+            MessageBox.Show("You drank a healing potion.");
         }
 
         private void RetreatBtn_Click(object sender, EventArgs e)
         {
             // run from fight, return to hub form
+            MessageBox.Show("You ran from the fight. (Wuss)");
             Close();
         }
 
