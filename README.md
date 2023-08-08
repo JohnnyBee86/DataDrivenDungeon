@@ -3,5 +3,5 @@
  - Written by Elias McKee and John Bartholomew
 
 ## Requirements
- - Visual Studio (2022 perfered)
+ - Visual Studio (2022 preferred)
  - .NET 6
