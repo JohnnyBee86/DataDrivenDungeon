@@ -13,7 +13,7 @@ namespace DataDrivenDungeon.Models
     public class Creature
     {
         /// <summary>
-        /// The creature's unique indentifier
+        /// The creature's unique identifier
         /// </summary>
         [Key]
         public int CreatureId { get; set; }
