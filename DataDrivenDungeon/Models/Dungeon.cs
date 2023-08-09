@@ -21,10 +21,10 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The dungeon's name
         /// </summary>
-        public string DungeonName { get; set; }
+        public string DungeonName { get; set; } = null!;
 
         /// <summary>
-        /// How many fights the player must win before the boss apears
+        /// How many fights the player must win before the boss appears
         /// </summary>
         public short FightsBeforeBoss { get; set; }
 
