@@ -83,7 +83,7 @@ namespace DataDrivenDungeon.Views
             Close();
         }
 
-        private bool DoMonstersRemain() 
+        private bool DoMonstersRemain()
         {
             // after fight, pop up a MessageBox with the loot drops
             throw new NotImplementedException();
