@@ -208,7 +208,7 @@
             textBox4.Enabled = false;
             textBox4.Location = new Point(411, 273);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(120, 23);
+            textBox4.Size = new Size(100, 23);
             textBox4.TabIndex = 13;
             textBox4.TabStop = false;
             // 
