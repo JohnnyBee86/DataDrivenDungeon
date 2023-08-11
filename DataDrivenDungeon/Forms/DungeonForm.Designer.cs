@@ -44,6 +44,8 @@
             label3 = new Label();
             label4 = new Label();
             textBox4 = new TextBox();
+            label5 = new Label();
+            txtboxMoney = new TextBox();
             MonsterGrb.SuspendLayout();
             SuspendLayout();
             // 
@@ -210,11 +212,31 @@
             textBox4.TabIndex = 13;
             textBox4.TabStop = false;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(344, 214);
+            label5.Name = "label5";
+            label5.Size = new Size(47, 15);
+            label5.TabIndex = 14;
+            label5.Text = "Money:";
+            // 
+            // txtboxMoney
+            // 
+            txtboxMoney.Enabled = false;
+            txtboxMoney.Location = new Point(411, 211);
+            txtboxMoney.Name = "txtboxMoney";
+            txtboxMoney.Size = new Size(100, 23);
+            txtboxMoney.TabIndex = 15;
+            txtboxMoney.TabStop = false;
+            // 
             // DungeonForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 332);
+            Controls.Add(txtboxMoney);
+            Controls.Add(label5);
             Controls.Add(textBox4);
             Controls.Add(label4);
             Controls.Add(label3);
@@ -254,5 +276,7 @@
         private Label label3;
         private Label label4;
         private TextBox textBox4;
+        private Label label5;
+        private TextBox txtboxMoney;
     }
 }
