@@ -30,6 +30,8 @@
         {
             TitleLbl = new Label();
             StartGameBtn = new Button();
+            PlayerNameTxt = new TextBox();
+            PlayerNameLbl = new Label();
             SuspendLayout();
             // 
             // TitleLbl
@@ -43,23 +45,41 @@
             // 
             // StartGameBtn
             // 
-            StartGameBtn.Location = new Point(119, 100);
+            StartGameBtn.Location = new Point(99, 142);
             StartGameBtn.Name = "StartGameBtn";
-            StartGameBtn.Size = new Size(239, 68);
+            StartGameBtn.Size = new Size(293, 68);
             StartGameBtn.TabIndex = 1;
             StartGameBtn.Text = "Start Game";
             StartGameBtn.UseVisualStyleBackColor = true;
             StartGameBtn.Click += StartGameBtn_Click;
             // 
+            // PlayerNameTxt
+            // 
+            PlayerNameTxt.Location = new Point(227, 85);
+            PlayerNameTxt.Name = "PlayerNameTxt";
+            PlayerNameTxt.Size = new Size(165, 31);
+            PlayerNameTxt.TabIndex = 2;
+            // 
+            // PlayerNameLbl
+            // 
+            PlayerNameLbl.AutoSize = true;
+            PlayerNameLbl.Location = new Point(99, 88);
+            PlayerNameLbl.Name = "PlayerNameLbl";
+            PlayerNameLbl.Size = new Size(115, 25);
+            PlayerNameLbl.TabIndex = 3;
+            PlayerNameLbl.Text = "Player Name:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(477, 205);
+            ClientSize = new Size(491, 244);
+            Controls.Add(PlayerNameLbl);
+            Controls.Add(PlayerNameTxt);
             Controls.Add(StartGameBtn);
             Controls.Add(TitleLbl);
             Name = "Form1";
-            Text = "DDDD";
+            Text = "Data Driven Dungeon Delver";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -68,5 +88,7 @@
 
         private Label TitleLbl;
         private Button StartGameBtn;
+        private TextBox PlayerNameTxt;
+        private Label PlayerNameLbl;
     }
 }

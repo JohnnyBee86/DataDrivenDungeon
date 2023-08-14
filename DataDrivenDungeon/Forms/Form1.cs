@@ -1,3 +1,5 @@
+using DataDrivenDungeon.Models;
+
 namespace DataDrivenDungeon
 {
     public partial class Form1 : Form
@@ -21,6 +23,7 @@ namespace DataDrivenDungeon
         {
             // send the player to the hub world
             HubForm hubForm = new HubForm();
+            GameData gameData = new(PlayerNameTxt.Text);
             hubForm.ShowDialog();
         }
 
