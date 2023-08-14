@@ -21,6 +21,15 @@ namespace DataDrivenDungeon
             InitializeComponent();
         }
 
+        private void SmithingStoreForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        // access the GameData
+        // find what weapon and armor they have
+        // populate the buttons with the data
+
         /// <summary>
         /// Lets you give money from your inventory to buy a new weapon.
         /// </summary>
@@ -28,8 +37,12 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void BuySwordBtn_Click(object sender, EventArgs e)
         {
+            // set the player's CurrentWeapon to the new weapon
+
+            // change the button to the next weapon
+
             // buy weapon (progression based)
-            MessageBox.Show("You got a new weapon!");
+            MessageBox.Show($"You got a new weapon!");
         }
 
         /// <summary>
@@ -39,6 +52,10 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void BuyArmorBtn_Click(object sender, EventArgs e)
         {
+            // set the player's CurrentArmor to the new armor
+
+            // change the button to the next armor
+
             // buy armor (progression based)
             MessageBox.Show("You got new armor!");
         }
@@ -53,5 +70,6 @@ namespace DataDrivenDungeon
             // leave the shop
             Close();
         }
+
     }
 }

@@ -73,6 +73,7 @@
             Controls.Add(BuySwordBtn);
             Name = "SmithingStoreForm";
             Text = "Stanley's Smithing";
+            Load += SmithingStoreForm_Load;
             ResumeLayout(false);
         }
 
