@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataDrivenDungeon.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,12 +24,23 @@ namespace DataDrivenDungeon
 
         private void SmithingStoreForm_Load(object sender, EventArgs e)
         {
-
+            populateButtons();
         }
 
-        // access the GameData
-        // find what weapon and armor they have
-        // populate the buttons with the data
+        private void populateButtons()
+        {
+            // access the GameData
+            GameData gameData = new();
+            
+            // find what weapon and armor they have
+            Weapon currentWeapon = gameData.CurrentWeapon;
+            Armor currentArmor = gameData.CurrentArmor;
+
+            // populate the buttons with the data
+            BuySwordBtn.Text = $"Buy {currentWeapon.WeaponName}";
+            BuyArmorBtn.Text = $"Buy {currentArmor.ArmorName}";
+        }
+
 
         /// <summary>
         /// Lets you give money from your inventory to buy a new weapon.
