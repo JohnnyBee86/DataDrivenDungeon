@@ -40,8 +40,8 @@
             label4 = new Label();
             txtboxFireballs = new TextBox();
             label5 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
+            txtboxRoundNumber = new TextBox();
+            txtBoxPlayerHealth = new TextBox();
             label6 = new Label();
             SuspendLayout();
             // 
@@ -153,21 +153,23 @@
             label5.TabIndex = 8;
             label5.Text = "Round #:";
             // 
-            // textBox1
+            // txtboxRoundNumber
             // 
-            textBox1.Enabled = false;
-            textBox1.Location = new Point(271, 6);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 9;
-            textBox1.TabStop = false;
+            txtboxRoundNumber.Enabled = false;
+            txtboxRoundNumber.Location = new Point(271, 6);
+            txtboxRoundNumber.Name = "txtboxRoundNumber";
+            txtboxRoundNumber.Size = new Size(100, 23);
+            txtboxRoundNumber.TabIndex = 9;
+            txtboxRoundNumber.TabStop = false;
             // 
-            // textBox2
+            // txtBoxPlayerHealth
             // 
-            textBox2.Location = new Point(271, 51);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 10;
+            txtBoxPlayerHealth.Enabled = false;
+            txtBoxPlayerHealth.Location = new Point(271, 51);
+            txtBoxPlayerHealth.Name = "txtBoxPlayerHealth";
+            txtBoxPlayerHealth.Size = new Size(100, 23);
+            txtBoxPlayerHealth.TabIndex = 10;
+            txtBoxPlayerHealth.TabStop = false;
             // 
             // label6
             // 
@@ -184,8 +186,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(589, 293);
             Controls.Add(label6);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
+            Controls.Add(txtBoxPlayerHealth);
+            Controls.Add(txtboxRoundNumber);
             Controls.Add(label5);
             Controls.Add(txtboxFireballs);
             Controls.Add(label4);
@@ -218,8 +220,8 @@
         private Label label4;
         private TextBox txtboxFireballs;
         private Label label5;
-        private TextBox textBox1;
-        private TextBox textBox2;
+        private TextBox txtboxRoundNumber;
+        private TextBox txtBoxPlayerHealth;
         private Label label6;
     }
 }
