@@ -41,6 +41,8 @@
             txtboxFireballs = new TextBox();
             label5 = new Label();
             textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -145,7 +147,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(209, 39);
+            label5.Location = new Point(209, 9);
             label5.Name = "label5";
             label5.Size = new Size(55, 15);
             label5.TabIndex = 8;
@@ -154,17 +156,35 @@
             // textBox1
             // 
             textBox1.Enabled = false;
-            textBox1.Location = new Point(271, 36);
+            textBox1.Location = new Point(271, 6);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(100, 23);
             textBox1.TabIndex = 9;
             textBox1.TabStop = false;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(271, 51);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(100, 23);
+            textBox2.TabIndex = 10;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(203, 54);
+            label6.Name = "label6";
+            label6.Size = new Size(61, 15);
+            label6.TabIndex = 11;
+            label6.Text = "Player HP:";
             // 
             // PostEncounterForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(589, 293);
+            Controls.Add(label6);
+            Controls.Add(textBox2);
             Controls.Add(textBox1);
             Controls.Add(label5);
             Controls.Add(txtboxFireballs);
@@ -199,5 +219,7 @@
         private TextBox txtboxFireballs;
         private Label label5;
         private TextBox textBox1;
+        private TextBox textBox2;
+        private Label label6;
     }
 }
