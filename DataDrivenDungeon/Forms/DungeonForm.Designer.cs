@@ -43,7 +43,7 @@
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            textBox4 = new TextBox();
+            txtboxPlayerHealth = new TextBox();
             label5 = new Label();
             txtboxMoney = new TextBox();
             MonsterGrb.SuspendLayout();
@@ -203,14 +203,14 @@
             label4.TabIndex = 12;
             label4.Text = "Count:";
             // 
-            // textBox4
+            // txtboxPlayerHealth
             // 
-            textBox4.Enabled = false;
-            textBox4.Location = new Point(411, 273);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 23);
-            textBox4.TabIndex = 13;
-            textBox4.TabStop = false;
+            txtboxPlayerHealth.Enabled = false;
+            txtboxPlayerHealth.Location = new Point(411, 273);
+            txtboxPlayerHealth.Name = "txtboxPlayerHealth";
+            txtboxPlayerHealth.Size = new Size(100, 23);
+            txtboxPlayerHealth.TabIndex = 13;
+            txtboxPlayerHealth.TabStop = false;
             // 
             // label5
             // 
@@ -237,7 +237,7 @@
             ClientSize = new Size(560, 332);
             Controls.Add(txtboxMoney);
             Controls.Add(label5);
-            Controls.Add(textBox4);
+            Controls.Add(txtboxPlayerHealth);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -275,7 +275,7 @@
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox txtboxPlayerHealth;
         private Label label5;
         private TextBox txtboxMoney;
     }
