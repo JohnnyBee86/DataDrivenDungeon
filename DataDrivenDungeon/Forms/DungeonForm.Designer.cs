@@ -28,144 +28,144 @@
         /// </summary>
         private void InitializeComponent()
         {
-            FireballBtn = new Button();
-            PotionBtn = new Button();
-            RetreatBtn = new Button();
-            AttackBtn = new Button();
-            Monster1Rdb = new RadioButton();
-            MonsterGrb = new GroupBox();
-            Monster3Rdb = new RadioButton();
-            Monster2Rdb = new RadioButton();
-            txtboxWeapon = new TextBox();
-            txtboxPotionCnt = new TextBox();
-            txtboxFireballCnt = new TextBox();
+            btnFireball = new Button();
+            btnPotion = new Button();
+            btnRetreat = new Button();
+            btnAttack = new Button();
+            rdbMonster1 = new RadioButton();
+            grbMonster = new GroupBox();
+            rdbMonster3 = new RadioButton();
+            rdbMonster2 = new RadioButton();
+            txtWeapon = new TextBox();
+            txtPotionCnt = new TextBox();
+            txtFireballCnt = new TextBox();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
-            txtboxPlayerHealth = new TextBox();
+            txtPlayerHealth = new TextBox();
             label5 = new Label();
-            txtboxMoney = new TextBox();
-            MonsterGrb.SuspendLayout();
+            txtMoney = new TextBox();
+            grbMonster.SuspendLayout();
             SuspendLayout();
             // 
-            // FireballBtn
+            // btnFireball
             // 
-            FireballBtn.Location = new Point(8, 199);
-            FireballBtn.Margin = new Padding(2);
-            FireballBtn.Name = "FireballBtn";
-            FireballBtn.Size = new Size(120, 45);
-            FireballBtn.TabIndex = 1;
-            FireballBtn.Text = "Fireball";
-            FireballBtn.UseVisualStyleBackColor = true;
-            FireballBtn.Click += FireballBtn_Click;
+            btnFireball.Location = new Point(8, 199);
+            btnFireball.Margin = new Padding(2);
+            btnFireball.Name = "btnFireball";
+            btnFireball.Size = new Size(120, 45);
+            btnFireball.TabIndex = 1;
+            btnFireball.Text = "Fireball";
+            btnFireball.UseVisualStyleBackColor = true;
+            btnFireball.Click += FireballBtn_Click;
             // 
-            // PotionBtn
+            // btnPotion
             // 
-            PotionBtn.Location = new Point(8, 261);
-            PotionBtn.Margin = new Padding(2);
-            PotionBtn.Name = "PotionBtn";
-            PotionBtn.Size = new Size(120, 45);
-            PotionBtn.TabIndex = 2;
-            PotionBtn.Text = "Potion";
-            PotionBtn.UseVisualStyleBackColor = true;
-            PotionBtn.Click += PotionBtn_Click;
+            btnPotion.Location = new Point(8, 261);
+            btnPotion.Margin = new Padding(2);
+            btnPotion.Name = "btnPotion";
+            btnPotion.Size = new Size(120, 45);
+            btnPotion.TabIndex = 2;
+            btnPotion.Text = "Potion";
+            btnPotion.UseVisualStyleBackColor = true;
+            btnPotion.Click += PotionBtn_Click;
             // 
-            // RetreatBtn
+            // btnRetreat
             // 
-            RetreatBtn.Location = new Point(431, 139);
-            RetreatBtn.Margin = new Padding(2);
-            RetreatBtn.Name = "RetreatBtn";
-            RetreatBtn.Size = new Size(120, 45);
-            RetreatBtn.TabIndex = 3;
-            RetreatBtn.Text = "Retreat";
-            RetreatBtn.UseVisualStyleBackColor = true;
-            RetreatBtn.Click += RetreatBtn_Click;
+            btnRetreat.Location = new Point(431, 139);
+            btnRetreat.Margin = new Padding(2);
+            btnRetreat.Name = "btnRetreat";
+            btnRetreat.Size = new Size(120, 45);
+            btnRetreat.TabIndex = 3;
+            btnRetreat.Text = "Retreat";
+            btnRetreat.UseVisualStyleBackColor = true;
+            btnRetreat.Click += RetreatBtn_Click;
             // 
-            // AttackBtn
+            // btnAttack
             // 
-            AttackBtn.Location = new Point(8, 139);
-            AttackBtn.Margin = new Padding(2);
-            AttackBtn.Name = "AttackBtn";
-            AttackBtn.Size = new Size(120, 45);
-            AttackBtn.TabIndex = 0;
-            AttackBtn.Text = "Attack";
-            AttackBtn.UseVisualStyleBackColor = true;
-            AttackBtn.Click += AttackBtn_Click;
+            btnAttack.Location = new Point(8, 139);
+            btnAttack.Margin = new Padding(2);
+            btnAttack.Name = "btnAttack";
+            btnAttack.Size = new Size(120, 45);
+            btnAttack.TabIndex = 0;
+            btnAttack.Text = "Attack";
+            btnAttack.UseVisualStyleBackColor = true;
+            btnAttack.Click += AttackBtn_Click;
             // 
-            // Monster1Rdb
+            // rdbMonster1
             // 
-            Monster1Rdb.AutoSize = true;
-            Monster1Rdb.Location = new Point(77, 37);
-            Monster1Rdb.Margin = new Padding(2);
-            Monster1Rdb.Name = "Monster1Rdb";
-            Monster1Rdb.Size = new Size(121, 19);
-            Monster1Rdb.TabIndex = 4;
-            Monster1Rdb.Text = "[Monster 1 Name]";
-            Monster1Rdb.UseVisualStyleBackColor = true;
+            rdbMonster1.AutoSize = true;
+            rdbMonster1.Location = new Point(77, 37);
+            rdbMonster1.Margin = new Padding(2);
+            rdbMonster1.Name = "rdbMonster1";
+            rdbMonster1.Size = new Size(121, 19);
+            rdbMonster1.TabIndex = 4;
+            rdbMonster1.Text = "[Monster 1 Name]";
+            rdbMonster1.UseVisualStyleBackColor = true;
             // 
-            // MonsterGrb
+            // grbMonster
             // 
-            MonsterGrb.Controls.Add(Monster3Rdb);
-            MonsterGrb.Controls.Add(Monster2Rdb);
-            MonsterGrb.Controls.Add(Monster1Rdb);
-            MonsterGrb.Location = new Point(8, 32);
-            MonsterGrb.Margin = new Padding(2);
-            MonsterGrb.Name = "MonsterGrb";
-            MonsterGrb.Padding = new Padding(2);
-            MonsterGrb.Size = new Size(543, 77);
-            MonsterGrb.TabIndex = 5;
-            MonsterGrb.TabStop = false;
-            MonsterGrb.Text = "Monsters";
+            grbMonster.Controls.Add(rdbMonster3);
+            grbMonster.Controls.Add(rdbMonster2);
+            grbMonster.Controls.Add(rdbMonster1);
+            grbMonster.Location = new Point(8, 32);
+            grbMonster.Margin = new Padding(2);
+            grbMonster.Name = "grbMonster";
+            grbMonster.Padding = new Padding(2);
+            grbMonster.Size = new Size(543, 77);
+            grbMonster.TabIndex = 5;
+            grbMonster.TabStop = false;
+            grbMonster.Text = "Monsters";
             // 
-            // Monster3Rdb
+            // rdbMonster3
             // 
-            Monster3Rdb.AutoSize = true;
-            Monster3Rdb.Location = new Point(336, 37);
-            Monster3Rdb.Margin = new Padding(2);
-            Monster3Rdb.Name = "Monster3Rdb";
-            Monster3Rdb.Size = new Size(121, 19);
-            Monster3Rdb.TabIndex = 6;
-            Monster3Rdb.Text = "[Monster 3 Name]";
-            Monster3Rdb.UseVisualStyleBackColor = true;
+            rdbMonster3.AutoSize = true;
+            rdbMonster3.Location = new Point(336, 37);
+            rdbMonster3.Margin = new Padding(2);
+            rdbMonster3.Name = "rdbMonster3";
+            rdbMonster3.Size = new Size(121, 19);
+            rdbMonster3.TabIndex = 6;
+            rdbMonster3.Text = "[Monster 3 Name]";
+            rdbMonster3.UseVisualStyleBackColor = true;
             // 
-            // Monster2Rdb
+            // rdbMonster2
             // 
-            Monster2Rdb.AutoSize = true;
-            Monster2Rdb.Location = new Point(207, 37);
-            Monster2Rdb.Margin = new Padding(2);
-            Monster2Rdb.Name = "Monster2Rdb";
-            Monster2Rdb.Size = new Size(121, 19);
-            Monster2Rdb.TabIndex = 5;
-            Monster2Rdb.Text = "[Monster 2 Name]";
-            Monster2Rdb.UseVisualStyleBackColor = true;
+            rdbMonster2.AutoSize = true;
+            rdbMonster2.Location = new Point(207, 37);
+            rdbMonster2.Margin = new Padding(2);
+            rdbMonster2.Name = "rdbMonster2";
+            rdbMonster2.Size = new Size(121, 19);
+            rdbMonster2.TabIndex = 5;
+            rdbMonster2.Text = "[Monster 2 Name]";
+            rdbMonster2.UseVisualStyleBackColor = true;
             // 
-            // txtboxWeapon
+            // txtWeapon
             // 
-            txtboxWeapon.Enabled = false;
-            txtboxWeapon.Location = new Point(215, 151);
-            txtboxWeapon.Name = "txtboxWeapon";
-            txtboxWeapon.Size = new Size(121, 23);
-            txtboxWeapon.TabIndex = 6;
-            txtboxWeapon.TabStop = false;
+            txtWeapon.Enabled = false;
+            txtWeapon.Location = new Point(215, 151);
+            txtWeapon.Name = "txtWeapon";
+            txtWeapon.Size = new Size(121, 23);
+            txtWeapon.TabIndex = 6;
+            txtWeapon.TabStop = false;
             // 
-            // txtboxPotionCnt
+            // txtPotionCnt
             // 
-            txtboxPotionCnt.Enabled = false;
-            txtboxPotionCnt.Location = new Point(215, 273);
-            txtboxPotionCnt.Name = "txtboxPotionCnt";
-            txtboxPotionCnt.Size = new Size(62, 23);
-            txtboxPotionCnt.TabIndex = 7;
-            txtboxPotionCnt.TabStop = false;
+            txtPotionCnt.Enabled = false;
+            txtPotionCnt.Location = new Point(215, 273);
+            txtPotionCnt.Name = "txtPotionCnt";
+            txtPotionCnt.Size = new Size(62, 23);
+            txtPotionCnt.TabIndex = 7;
+            txtPotionCnt.TabStop = false;
             // 
-            // txtboxFireballCnt
+            // txtFireballCnt
             // 
-            txtboxFireballCnt.Enabled = false;
-            txtboxFireballCnt.Location = new Point(215, 211);
-            txtboxFireballCnt.Name = "txtboxFireballCnt";
-            txtboxFireballCnt.Size = new Size(62, 23);
-            txtboxFireballCnt.TabIndex = 8;
-            txtboxFireballCnt.TabStop = false;
+            txtFireballCnt.Enabled = false;
+            txtFireballCnt.Location = new Point(215, 211);
+            txtFireballCnt.Name = "txtFireballCnt";
+            txtFireballCnt.Size = new Size(62, 23);
+            txtFireballCnt.TabIndex = 8;
+            txtFireballCnt.TabStop = false;
             // 
             // label1
             // 
@@ -203,14 +203,14 @@
             label4.TabIndex = 12;
             label4.Text = "Count:";
             // 
-            // txtboxPlayerHealth
+            // txtPlayerHealth
             // 
-            txtboxPlayerHealth.Enabled = false;
-            txtboxPlayerHealth.Location = new Point(411, 273);
-            txtboxPlayerHealth.Name = "txtboxPlayerHealth";
-            txtboxPlayerHealth.Size = new Size(100, 23);
-            txtboxPlayerHealth.TabIndex = 13;
-            txtboxPlayerHealth.TabStop = false;
+            txtPlayerHealth.Enabled = false;
+            txtPlayerHealth.Location = new Point(411, 273);
+            txtPlayerHealth.Name = "txtPlayerHealth";
+            txtPlayerHealth.Size = new Size(100, 23);
+            txtPlayerHealth.TabIndex = 13;
+            txtPlayerHealth.TabStop = false;
             // 
             // label5
             // 
@@ -221,62 +221,62 @@
             label5.TabIndex = 14;
             label5.Text = "Money:";
             // 
-            // txtboxMoney
+            // txtMoney
             // 
-            txtboxMoney.Enabled = false;
-            txtboxMoney.Location = new Point(411, 211);
-            txtboxMoney.Name = "txtboxMoney";
-            txtboxMoney.Size = new Size(100, 23);
-            txtboxMoney.TabIndex = 15;
-            txtboxMoney.TabStop = false;
+            txtMoney.Enabled = false;
+            txtMoney.Location = new Point(411, 211);
+            txtMoney.Name = "txtMoney";
+            txtMoney.Size = new Size(100, 23);
+            txtMoney.TabIndex = 15;
+            txtMoney.TabStop = false;
             // 
             // DungeonForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(560, 332);
-            Controls.Add(txtboxMoney);
+            Controls.Add(txtMoney);
             Controls.Add(label5);
-            Controls.Add(txtboxPlayerHealth);
+            Controls.Add(txtPlayerHealth);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(txtboxFireballCnt);
-            Controls.Add(txtboxPotionCnt);
-            Controls.Add(txtboxWeapon);
-            Controls.Add(MonsterGrb);
-            Controls.Add(RetreatBtn);
-            Controls.Add(FireballBtn);
-            Controls.Add(AttackBtn);
-            Controls.Add(PotionBtn);
+            Controls.Add(txtFireballCnt);
+            Controls.Add(txtPotionCnt);
+            Controls.Add(txtWeapon);
+            Controls.Add(grbMonster);
+            Controls.Add(btnRetreat);
+            Controls.Add(btnFireball);
+            Controls.Add(btnAttack);
+            Controls.Add(btnPotion);
             Margin = new Padding(2);
             Name = "DungeonForm";
             Text = "Dungeon [Current Dungeon Level]";
-            MonsterGrb.ResumeLayout(false);
-            MonsterGrb.PerformLayout();
+            grbMonster.ResumeLayout(false);
+            grbMonster.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-        private Button FireballBtn;
-        private Button PotionBtn;
-        private Button RetreatBtn;
-        private Button AttackBtn;
-        private RadioButton Monster1Rdb;
-        private GroupBox MonsterGrb;
-        private RadioButton Monster3Rdb;
-        private RadioButton Monster2Rdb;
-        private TextBox txtboxWeapon;
-        private TextBox txtboxPotionCnt;
-        private TextBox txtboxFireballCnt;
+        private Button btnFireball;
+        private Button btnPotion;
+        private Button btnRetreat;
+        private Button btnAttack;
+        private RadioButton rdbMonster1;
+        private GroupBox grbMonster;
+        private RadioButton rdbMonster3;
+        private RadioButton rdbMonster2;
+        private TextBox txtWeapon;
+        private TextBox txtPotionCnt;
+        private TextBox txtFireballCnt;
         private Label label1;
         private Label label2;
         private Label label3;
         private Label label4;
-        private TextBox txtboxPlayerHealth;
+        private TextBox txtPlayerHealth;
         private Label label5;
-        private TextBox txtboxMoney;
+        private TextBox txtMoney;
     }
 }

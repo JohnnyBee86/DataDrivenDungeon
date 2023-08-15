@@ -30,18 +30,18 @@
         {
             label1 = new Label();
             label2 = new Label();
-            txtboxMoney = new TextBox();
-            txtboxEmblems = new TextBox();
+            txtMoney = new TextBox();
+            txtEmblems = new TextBox();
             btnContinue = new Button();
             btnHealContinue = new Button();
             btnRetreat = new Button();
             label3 = new Label();
-            txtboxPotions = new TextBox();
+            txtPotions = new TextBox();
             label4 = new Label();
-            txtboxFireballs = new TextBox();
+            txtFireballs = new TextBox();
             label5 = new Label();
-            txtboxRoundNumber = new TextBox();
-            txtBoxPlayerHealth = new TextBox();
+            txtRoundNumber = new TextBox();
+            txtPlayerHealth = new TextBox();
             label6 = new Label();
             SuspendLayout();
             // 
@@ -63,23 +63,23 @@
             label2.TabIndex = 1;
             label2.Text = "Emblems:";
             // 
-            // txtboxMoney
+            // txtMoney
             // 
-            txtboxMoney.Enabled = false;
-            txtboxMoney.Location = new Point(109, 101);
-            txtboxMoney.Name = "txtboxMoney";
-            txtboxMoney.Size = new Size(100, 23);
-            txtboxMoney.TabIndex = 2;
-            txtboxMoney.TabStop = false;
+            txtMoney.Enabled = false;
+            txtMoney.Location = new Point(109, 101);
+            txtMoney.Name = "txtMoney";
+            txtMoney.Size = new Size(100, 23);
+            txtMoney.TabIndex = 2;
+            txtMoney.TabStop = false;
             // 
-            // txtboxEmblems
+            // txtEmblems
             // 
-            txtboxEmblems.Enabled = false;
-            txtboxEmblems.Location = new Point(377, 101);
-            txtboxEmblems.Name = "txtboxEmblems";
-            txtboxEmblems.Size = new Size(100, 23);
-            txtboxEmblems.TabIndex = 3;
-            txtboxEmblems.TabStop = false;
+            txtEmblems.Enabled = false;
+            txtEmblems.Location = new Point(377, 101);
+            txtEmblems.Name = "txtEmblems";
+            txtEmblems.Size = new Size(100, 23);
+            txtEmblems.TabIndex = 3;
+            txtEmblems.TabStop = false;
             // 
             // btnContinue
             // 
@@ -117,14 +117,14 @@
             label3.TabIndex = 4;
             label3.Text = "Potions:";
             // 
-            // txtboxPotions
+            // txtPotions
             // 
-            txtboxPotions.Enabled = false;
-            txtboxPotions.Location = new Point(109, 140);
-            txtboxPotions.Name = "txtboxPotions";
-            txtboxPotions.Size = new Size(100, 23);
-            txtboxPotions.TabIndex = 5;
-            txtboxPotions.TabStop = false;
+            txtPotions.Enabled = false;
+            txtPotions.Location = new Point(109, 140);
+            txtPotions.Name = "txtPotions";
+            txtPotions.Size = new Size(100, 23);
+            txtPotions.TabIndex = 5;
+            txtPotions.TabStop = false;
             // 
             // label4
             // 
@@ -135,14 +135,14 @@
             label4.TabIndex = 6;
             label4.Text = "Fireballs:";
             // 
-            // txtboxFireballs
+            // txtFireballs
             // 
-            txtboxFireballs.Enabled = false;
-            txtboxFireballs.Location = new Point(377, 140);
-            txtboxFireballs.Name = "txtboxFireballs";
-            txtboxFireballs.Size = new Size(100, 23);
-            txtboxFireballs.TabIndex = 7;
-            txtboxFireballs.TabStop = false;
+            txtFireballs.Enabled = false;
+            txtFireballs.Location = new Point(377, 140);
+            txtFireballs.Name = "txtFireballs";
+            txtFireballs.Size = new Size(100, 23);
+            txtFireballs.TabIndex = 7;
+            txtFireballs.TabStop = false;
             // 
             // label5
             // 
@@ -153,23 +153,23 @@
             label5.TabIndex = 8;
             label5.Text = "Round #:";
             // 
-            // txtboxRoundNumber
+            // txtRoundNumber
             // 
-            txtboxRoundNumber.Enabled = false;
-            txtboxRoundNumber.Location = new Point(271, 6);
-            txtboxRoundNumber.Name = "txtboxRoundNumber";
-            txtboxRoundNumber.Size = new Size(100, 23);
-            txtboxRoundNumber.TabIndex = 9;
-            txtboxRoundNumber.TabStop = false;
+            txtRoundNumber.Enabled = false;
+            txtRoundNumber.Location = new Point(271, 6);
+            txtRoundNumber.Name = "txtRoundNumber";
+            txtRoundNumber.Size = new Size(100, 23);
+            txtRoundNumber.TabIndex = 9;
+            txtRoundNumber.TabStop = false;
             // 
-            // txtBoxPlayerHealth
+            // txtPlayerHealth
             // 
-            txtBoxPlayerHealth.Enabled = false;
-            txtBoxPlayerHealth.Location = new Point(271, 51);
-            txtBoxPlayerHealth.Name = "txtBoxPlayerHealth";
-            txtBoxPlayerHealth.Size = new Size(100, 23);
-            txtBoxPlayerHealth.TabIndex = 10;
-            txtBoxPlayerHealth.TabStop = false;
+            txtPlayerHealth.Enabled = false;
+            txtPlayerHealth.Location = new Point(271, 51);
+            txtPlayerHealth.Name = "txtPlayerHealth";
+            txtPlayerHealth.Size = new Size(100, 23);
+            txtPlayerHealth.TabIndex = 10;
+            txtPlayerHealth.TabStop = false;
             // 
             // label6
             // 
@@ -186,18 +186,18 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(589, 293);
             Controls.Add(label6);
-            Controls.Add(txtBoxPlayerHealth);
-            Controls.Add(txtboxRoundNumber);
+            Controls.Add(txtPlayerHealth);
+            Controls.Add(txtRoundNumber);
             Controls.Add(label5);
-            Controls.Add(txtboxFireballs);
+            Controls.Add(txtFireballs);
             Controls.Add(label4);
-            Controls.Add(txtboxPotions);
+            Controls.Add(txtPotions);
             Controls.Add(label3);
             Controls.Add(btnRetreat);
             Controls.Add(btnHealContinue);
             Controls.Add(btnContinue);
-            Controls.Add(txtboxEmblems);
-            Controls.Add(txtboxMoney);
+            Controls.Add(txtEmblems);
+            Controls.Add(txtMoney);
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "PostEncounterForm";
@@ -210,18 +210,18 @@
 
         private Label label1;
         private Label label2;
-        private TextBox txtboxMoney;
-        private TextBox txtboxEmblems;
+        private TextBox txtMoney;
+        private TextBox txtEmblems;
         private Button btnContinue;
         private Button btnHealContinue;
         private Button btnRetreat;
         private Label label3;
-        private TextBox txtboxPotions;
+        private TextBox txtPotions;
         private Label label4;
-        private TextBox txtboxFireballs;
+        private TextBox txtFireballs;
         private Label label5;
-        private TextBox txtboxRoundNumber;
-        private TextBox txtBoxPlayerHealth;
+        private TextBox txtRoundNumber;
+        private TextBox txtPlayerHealth;
         private Label label6;
     }
 }
