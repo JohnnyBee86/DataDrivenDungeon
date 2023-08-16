@@ -35,7 +35,7 @@ namespace DataDrivenDungeon
         private void BankBtn_Click(object sender, EventArgs e)
         {
             // connect to the bank
-            BankForm bankForm = new BankForm(player);
+            BankForm bankForm = new BankForm(PLAYER);
             bankForm.ShowDialog();
         }
 
@@ -47,7 +47,7 @@ namespace DataDrivenDungeon
         private void JackpotBtn_Click(object sender, EventArgs e)
         {
             // connect to the jackpot shop form
-            JackpotStoreForm jackpotStoreForm = new JackpotStoreForm(player);
+            JackpotStoreForm jackpotStoreForm = new JackpotStoreForm(PLAYER);
             jackpotStoreForm.ShowDialog();
         }
 
@@ -59,7 +59,7 @@ namespace DataDrivenDungeon
         private void RepositoryBtn_Click(object sender, EventArgs e)
         {
             // connect to the repository shop form
-            RepositoryStoreForm repositoryStoreForm = new RepositoryStoreForm(player);
+            RepositoryStoreForm repositoryStoreForm = new RepositoryStoreForm(PLAYER);
             repositoryStoreForm.ShowDialog();
         }
 
@@ -71,7 +71,7 @@ namespace DataDrivenDungeon
         private void SmithingBtn_Click(object sender, EventArgs e)
         {
             // connect to the smithing shop form
-            SmithingStoreForm smithingStoreForm = new SmithingStoreForm(player);
+            SmithingStoreForm smithingStoreForm = new SmithingStoreForm(PLAYER);
             smithingStoreForm.ShowDialog();
         }
 
@@ -83,7 +83,7 @@ namespace DataDrivenDungeon
         private void DungeonBtn_Click(object sender, EventArgs e)
         {
             // connect to the dungeon form
-            DungeonForm dungeonForm = new DungeonForm(player);
+            DungeonForm dungeonForm = new DungeonForm(PLAYER);
             dungeonForm.ShowDialog();
         }
 
