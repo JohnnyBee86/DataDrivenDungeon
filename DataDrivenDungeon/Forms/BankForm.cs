@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataDrivenDungeon.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,14 @@ namespace DataDrivenDungeon
 {
     public partial class BankForm : Form
     {
+        private GameData PLAYER = new GameData();
         /// <summary>
         /// This is the form for the Bank, where the player can store and take out coins and magic items,
         /// so that if they fail in a dungeon, they won't lose the items in the bank.
         /// </summary>
-        public BankForm()
+        public BankForm(GameData player)
         {
+            PLAYER = player;
             InitializeComponent();
         }
 

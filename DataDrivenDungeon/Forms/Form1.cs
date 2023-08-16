@@ -29,11 +29,14 @@ namespace DataDrivenDungeon
                 newPlayer.PlayerName = PlayerNameTxt.Text;
                 newPlayer.PlayerHealth = 25;
                 newPlayer.CurrentWeapon = new() { WeaponName = "Dagger" };
-                newPlayer.CurrentArmor = new() { ArmorName = "T-Shirt" }; // placeholder. please replace
-                newPlayer.HighestDungeonAllowed = new() { DungeonName = "Helhigm" }; // placeholder. please replace
+                newPlayer.CurrentArmor = new() { ArmorName = "T-Shirt" };
+                newPlayer.HighestDungeonAllowed = new() { DungeonName = "Helhigm" };
+
+                GameContext newGame = new();
+                newGame.Game.Add(newPlayer);
 
                 // send the player to the hub world
-                HubForm hubForm = new HubForm();
+                HubForm hubForm = new HubForm(newPlayer);
                 hubForm.ShowDialog();
             }
             else

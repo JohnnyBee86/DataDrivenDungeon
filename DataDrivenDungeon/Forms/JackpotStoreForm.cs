@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataDrivenDungeon.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,14 @@ namespace DataDrivenDungeon
 {
     public partial class JackpotStoreForm : Form
     {
+        private GameData PLAYER = new GameData();
         /// <summary>
         /// This is the form for Jasper's Jackpot, the lottery store where you can trade
         /// Goblin Emblems for a chance at cool items.
         /// </summary>
-        public JackpotStoreForm()
+        public JackpotStoreForm(GameData player)
         {
+            PLAYER = player;
             InitializeComponent();
         }
 
