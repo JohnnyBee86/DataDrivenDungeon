@@ -22,15 +22,15 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void StartGameBtn_Click(object sender, EventArgs e)
         {
-            if (PlayerNameTxt.Text != null)
+            if (PlayerNameTxt.Text != null && PlayerNameTxt.Text != "")
             {
                 // make a new GameContext and GameData
                 GameData newPlayer = new();
                 newPlayer.PlayerName = PlayerNameTxt.Text;
                 newPlayer.PlayerHealth = 25;
-                newPlayer.CurrentWeapon = new(); // placeholder. please replace
-                newPlayer.CurrentArmor = new(); // placeholder. please replace
-                newPlayer.HighestDungeonAllowed = new(); // placeholder. please replace
+                newPlayer.CurrentWeapon = new() { WeaponName = "Dagger" };
+                newPlayer.CurrentArmor = new() { ArmorName = "T-Shirt" }; // placeholder. please replace
+                newPlayer.HighestDungeonAllowed = new() { DungeonName = "Helhigm" }; // placeholder. please replace
 
                 // send the player to the hub world
                 HubForm hubForm = new HubForm();
