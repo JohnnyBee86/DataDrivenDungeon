@@ -34,6 +34,7 @@ namespace DataDrivenDungeon
 
                 GameContext newGame = new();
                 newGame.Game.Add(newPlayer);
+                newGame.SaveChanges();
 
                 // send the player to the hub world
                 HubForm hubForm = new HubForm(newPlayer);
