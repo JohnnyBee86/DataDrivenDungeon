@@ -21,10 +21,15 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void StartGameBtn_Click(object sender, EventArgs e)
         {
-            // send the player to the hub world
-            HubForm hubForm = new HubForm();
-            GameData gameData = new(PlayerNameTxt.Text);
-            hubForm.ShowDialog();
+            if (PlayerNameTxt.Text != null)
+            {
+                // send the player to the hub world
+                HubForm hubForm = new HubForm();
+                hubForm.ShowDialog();
+            } else
+            {
+                MessageBox.Show("You must enter a player name.");
+            }
         }
 
     }
