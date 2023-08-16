@@ -55,15 +55,16 @@
             // 
             // PlayerNameTxt
             // 
-            PlayerNameTxt.Location = new Point(227, 85);
+            PlayerNameTxt.Location = new Point(209, 85);
+            PlayerNameTxt.MaxLength = 15;
             PlayerNameTxt.Name = "PlayerNameTxt";
-            PlayerNameTxt.Size = new Size(165, 31);
+            PlayerNameTxt.Size = new Size(205, 31);
             PlayerNameTxt.TabIndex = 2;
             // 
             // PlayerNameLbl
             // 
             PlayerNameLbl.AutoSize = true;
-            PlayerNameLbl.Location = new Point(99, 88);
+            PlayerNameLbl.Location = new Point(81, 88);
             PlayerNameLbl.Name = "PlayerNameLbl";
             PlayerNameLbl.Size = new Size(115, 25);
             PlayerNameLbl.TabIndex = 3;

@@ -1,3 +1,4 @@
+using DataDrivenDungeon.Data;
 using DataDrivenDungeon.Models;
 
 namespace DataDrivenDungeon
@@ -23,10 +24,19 @@ namespace DataDrivenDungeon
         {
             if (PlayerNameTxt.Text != null)
             {
+                // make a new GameContext and GameData
+                GameData newPlayer = new();
+                newPlayer.PlayerName = PlayerNameTxt.Text;
+                newPlayer.PlayerHealth = 25;
+                newPlayer.CurrentWeapon = new(); // placeholder. please replace
+                newPlayer.CurrentArmor = new(); // placeholder. please replace
+                newPlayer.HighestDungeonAllowed = new(); // placeholder. please replace
+
                 // send the player to the hub world
                 HubForm hubForm = new HubForm();
                 hubForm.ShowDialog();
-            } else
+            }
+            else
             {
                 MessageBox.Show("You must enter a player name.");
             }
