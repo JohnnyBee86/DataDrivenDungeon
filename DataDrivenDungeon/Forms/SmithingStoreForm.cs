@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataDrivenDungeon.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +13,14 @@ namespace DataDrivenDungeon
 {
     public partial class SmithingStoreForm : Form
     {
+        private GameData PLAYER = new GameData();
         /// <summary>
         /// This is the form for Stanley's Smithing, a shop where you can buy weapons and armor,
         /// which you can gain access to better armor/weapons when you complete dungeon levels.
         /// </summary>
-        public SmithingStoreForm()
+        public SmithingStoreForm(GameData player)
         {
+            PLAYER = player;
             InitializeComponent();
         }
 

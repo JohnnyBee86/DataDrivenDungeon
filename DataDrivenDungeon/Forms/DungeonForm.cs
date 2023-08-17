@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataDrivenDungeon.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,8 +17,10 @@ namespace DataDrivenDungeon.Views
     /// </summary>
     public partial class DungeonForm : Form
     {
-        public DungeonForm()
+        private GameData PLAYER = new GameData();
+        public DungeonForm(GameData player)
         {
+            PLAYER = player;
             InitializeComponent();
         }
 
