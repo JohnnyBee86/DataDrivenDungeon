@@ -20,12 +20,39 @@ namespace DataDrivenDungeon.Views
     /// </summary>
     public partial class DungeonForm : Form
     {
+        /// <summary>
+        /// Field to hold the current player
+        /// </summary>
         private GameData PLAYER = new();
+
+        /// <summary>
+        /// Field to hold DbContext
+        /// </summary>
         private GameContext _context = new();
+
+        /// <summary>
+        /// Field to hold the current weapon
+        /// </summary>
         private Weapon weapon;
+
+        /// <summary>
+        /// Field to hold the current armor
+        /// </summary>
         private Armor armor;
+
+        /// <summary>
+        /// Field to hold the current inventory
+        /// </summary>
         //private Inventory inventory;
+
+        ///<summary>
+        ///Field to hold the current dungeon
+        /// </summary>
         private Dungeon dungeon;
+
+        /// <summary>
+        /// Field to hold the player's health
+        /// </summary>
         private int HP;
         public DungeonForm(GameData player)
         {
@@ -38,12 +65,19 @@ namespace DataDrivenDungeon.Views
 
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Populates form with relevant data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DungeonForm_Load(object sender, EventArgs e)
         {
             txtWeapon.Text = weapon.WeaponName;
             txtPlayerHealth.Text = HP.ToString();
             //txtFireballCnt.Text = inventory.Fireballs.ToString();
-
+            //txtPotionCnt.Text = inventory.Potions.ToString();
+            MessageBox.Show(dungeon.DungeonName); // pop up to show dungeon being retrieved
         }
 
         /// <summary>
@@ -108,6 +142,11 @@ namespace DataDrivenDungeon.Views
             Close();
         }
 
+        /// <summary>
+        /// Checks if monsters are still alive
+        /// </summary>
+        /// <returns>True if any monsters are still alive</returns>
+        /// <exception cref="NotImplementedException"></exception>
         private bool DoMonstersRemain()
         {
             // after fight, pop up a MessageBox with the loot drops
