@@ -8,9 +8,39 @@
 	Started database design
   
 7/26 - EM 2hr
-	Created and linked the winforms for the game
+	Created and linked the win forms for the game
       JB 1hr
 	Started database model scripting
   
 8/2 - JB 2hr
-	Finished databse model scripting, context class, connection string, and merged with main
+	Finished database model scripting, context class, connection string, and merged with main
+
+8/9 JB - 1 hr
+	Database null-able and spelling fixes
+	Work-flow planning
+
+8/11 JB - 1 hr
+	Added to Dungeon Form
+	Added PostEncounter Form
+
+8/14 JB - 1 hr
+	Reviewing partner's code and planning DB helper model
+
+8/15 JB - 1 hr
+	Added Round counter to PostEncounter form
+	Merged Dungeon and PostEncounter forms to Main
+	Realized I forgot to rename Round and Health text-boxes, 
+		reopened issue, fixed, merged
+	Changed prefixes where I had used txtbox instead of txt
+
+8/16 JB & EM - 1 hr
+	Started CRUD functionality
+	PLAYER object creation
+	PLAYER object passing between forms
+
+8/17 JB - 4 hrs
+	Started Round counter functionality
+	Started work on dungeon form CRUD
+	DBHelper methods
+	Inventory table problems
+	Added comments where applicable
