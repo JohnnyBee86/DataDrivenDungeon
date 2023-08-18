@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataDrivenDungeon.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,9 +10,10 @@ namespace DataDrivenDungeon.Models
     public class DBHelper
     {
         // gets
-        public Weapon GetWeapon()
+        public static Weapon GetWeapon(GameData player, GameContext context)
         {
-            throw new NotImplementedException();
+            Weapon w = context.Weapons.Where(w => w.WeaponId == player.CurrentWeapon.WeaponId).Single();
+            return w;
         }
 
         public Armor GetArmor()

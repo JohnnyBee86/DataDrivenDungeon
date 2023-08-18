@@ -253,6 +253,7 @@
             Margin = new Padding(2);
             Name = "DungeonForm";
             Text = "Dungeon [Current Dungeon Level]";
+            Load += DungeonForm_Load;
             grbMonster.ResumeLayout(false);
             grbMonster.PerformLayout();
             ResumeLayout(false);
