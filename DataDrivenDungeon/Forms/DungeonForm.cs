@@ -26,15 +26,19 @@ namespace DataDrivenDungeon.Views
         private Armor armor;
         private Inventory inventory;
         private Dungeon dungeon;
+        private int HP;
         public DungeonForm(GameData player)
         {
             PLAYER = player;
             weapon = DBHelper.GetWeapon(player, _context);
+            armor = DBHelper.GetArmor(player, _context);
+            HP = armor.ArmorHealthMax + player.PlayerHealth;
             InitializeComponent();
         }
         private void DungeonForm_Load(object sender, EventArgs e)
         {
             txtWeapon.Text = weapon.WeaponName;
+            txtPlayerHealth.Text = HP.ToString();
         }
 
         /// <summary>

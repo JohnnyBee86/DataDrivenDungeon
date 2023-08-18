@@ -1,7 +1,9 @@
 ﻿using DataDrivenDungeon.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,9 +18,10 @@ namespace DataDrivenDungeon.Models
             return w;
         }
 
-        public Armor GetArmor()
+        public static Armor GetArmor(GameData player, GameContext context)
         {
-            throw new NotImplementedException();
+            Armor a = context.Armors.Where(a => a.ArmorId == player.CurrentArmor.ArmorId).Single();
+            return a;
         }
 
         public GameData GetGameData()
@@ -26,12 +29,12 @@ namespace DataDrivenDungeon.Models
             throw new NotImplementedException();
         }
 
-        public Inventory GetInventory()
+        public static Inventory GetInventory(GameData player, GameContext context)
         {
             throw new NotImplementedException();
         }
 
-        public Dungeon GetDungeon()
+        public static Dungeon GetDungeon(GameData player, GameContext context)
         {
             throw new NotImplementedException();
         }
