@@ -32,6 +32,10 @@ namespace DataDrivenDungeon.Models
         public static Inventory GetInventory(GameData player, GameContext context)
         {
             throw new NotImplementedException();
+            /*
+            Inventory i = context.GameInventory.Where(i => i.InventoryId == player.GameId).Single();
+            return i;
+            */
         }
 
         public static Dungeon GetDungeon(GameData player, GameContext context)

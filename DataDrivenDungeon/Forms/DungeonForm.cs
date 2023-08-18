@@ -24,7 +24,7 @@ namespace DataDrivenDungeon.Views
         private GameContext _context = new();
         private Weapon weapon;
         private Armor armor;
-        private Inventory inventory;
+        //private Inventory inventory;
         private Dungeon dungeon;
         private int HP;
         public DungeonForm(GameData player)
@@ -33,12 +33,17 @@ namespace DataDrivenDungeon.Views
             weapon = DBHelper.GetWeapon(player, _context);
             armor = DBHelper.GetArmor(player, _context);
             HP = armor.ArmorHealthMax + player.PlayerHealth;
+            //inventory = DBHelper.GetInventory(player, _context);
+            dungeon = DBHelper.GetDungeon(player, _context);
+
             InitializeComponent();
         }
         private void DungeonForm_Load(object sender, EventArgs e)
         {
             txtWeapon.Text = weapon.WeaponName;
             txtPlayerHealth.Text = HP.ToString();
+            //txtFireballCnt.Text = inventory.Fireballs.ToString();
+
         }
 
         /// <summary>

@@ -32,8 +32,22 @@ namespace DataDrivenDungeon
                 newPlayer.CurrentArmor = new() { ArmorName = "T-Shirt" };
                 newPlayer.HighestDungeonAllowed = new() { DungeonName = "Helhigm" };
 
+                /*
+                 * Talk to Joe, conflict with FK when saving
+                 * 
+                Inventory newInventory = new();
+                newInventory.Coins = 0;
+                newInventory.BankedCoins = 0;
+                newInventory.Potions = 0;
+                newInventory.BankedPotions = 0;
+                newInventory.Fireballs = 0;
+                newInventory.BankedFireballs = 0;
+                newInventory.Emblems = 0;
+                */
+
                 GameContext newGame = new();
                 newGame.Game.Add(newPlayer);
+                //newGame.GameInventory.Add(newInventory);
                 newGame.SaveChanges();
 
                 // send the player to the hub world
