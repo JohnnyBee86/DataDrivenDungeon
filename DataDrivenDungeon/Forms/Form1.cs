@@ -20,7 +20,7 @@ namespace DataDrivenDungeon
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void StartGameBtn_Click(object sender, EventArgs e)
+        private void NewGameBtn_Click(object sender, EventArgs e)
         {
             if (PlayerNameTxt.Text != null && PlayerNameTxt.Text != "")
             {
