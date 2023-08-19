@@ -103,6 +103,7 @@
             LoadGamebtn.TabIndex = 3;
             LoadGamebtn.Text = "Load Game";
             LoadGamebtn.UseVisualStyleBackColor = true;
+            LoadGamebtn.Click += LoadGameBtn_Click;
             // 
             // Form1
             // 

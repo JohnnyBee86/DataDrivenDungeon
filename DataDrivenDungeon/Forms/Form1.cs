@@ -54,9 +54,22 @@ namespace DataDrivenDungeon
             savedGames = (from games in getSaved.Game select games).ToList();
             foreach (GameData game in savedGames)
             {
-                SavedGameslst.Items.Add(game.PlayerName);
+                SavedGameslst.Items.Add(game);
             }
+        }
 
+        private void LoadGameBtn_Click(object sender, EventArgs e)
+        {
+            if (SavedGameslst.SelectedItem != null)
+            {
+                GameData gameToLoad = (GameData)SavedGameslst.SelectedItem;
+                HubForm hubForm = new HubForm(gameToLoad);
+                hubForm.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("You must pick a game to load.");
+            }
         }
     }
 }
