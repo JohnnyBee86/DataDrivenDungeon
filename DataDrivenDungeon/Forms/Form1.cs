@@ -5,6 +5,7 @@ namespace DataDrivenDungeon
 {
     public partial class Form1 : Form
     {
+
         /// <summary>
         /// This is the start-up form for the game. Might possibly add the ability to enter a JSON
         /// string so that you can load a save file of a previous game.
@@ -46,5 +47,16 @@ namespace DataDrivenDungeon
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            List<GameData> savedGames = new();
+            GameContext getSaved = new();
+            savedGames = (from games in getSaved.Game select games).ToList();
+            foreach (GameData game in savedGames)
+            {
+                SavedGameslst.Items.Add(game.PlayerName);
+            }
+
+        }
     }
 }
