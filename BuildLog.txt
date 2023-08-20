@@ -14,3 +14,6 @@
   
 8/2 - JB 2hr
 	Finished databse model scripting, context class, connection string, and merged with main
+
+8/18 JB - 2 hrs
+	Started "Load Game" functionality
