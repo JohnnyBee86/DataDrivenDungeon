@@ -58,7 +58,7 @@ namespace DataDrivenDungeon
         {
             List<GameData> savedGames = new();
             GameContext getSaved = new();
-            savedGames = (from games in getSaved.Game select games).ToList();
+            savedGames = getSaved.Game.ToList();
             foreach (GameData game in savedGames)
             {
                 SavedGameslst.Items.Add(game);
