@@ -47,6 +47,13 @@ namespace DataDrivenDungeon
             }
         }
 
+        /// <summary>
+        /// The form's on-load event
+        /// Gets all saved games from the database
+        /// Then populates the "Saved Games" list-box
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
             List<GameData> savedGames = new();
@@ -58,6 +65,12 @@ namespace DataDrivenDungeon
             }
         }
 
+        /// <summary>
+        /// Gets the selected Saved Game to load and passes it to the Hub form
+        /// If no Saved game is selected it shows appropriate instructions
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void LoadGameBtn_Click(object sender, EventArgs e)
         {
             if (SavedGameslst.SelectedItem != null)
