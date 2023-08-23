@@ -8,9 +8,12 @@
 	Started database design
   
 7/26 - EM 2hr
-	Created and linked the winforms for the game
+	Created and linked the win-forms for the game
       JB 1hr
 	Started database model scripting
   
 8/2 - JB 2hr
-	Finished databse model scripting, context class, connection string, and merged with main
+	Finished database model scripting, context class, connection string, and merged with main
+
+8/18 JB - 2 hrs
+	Started "Load Game" functionality

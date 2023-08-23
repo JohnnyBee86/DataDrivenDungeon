@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,5 +51,10 @@ namespace DataDrivenDungeon.Models
         /// The highest level dungeon the player may enter
         /// </summary>
         public Dungeon HighestDungeonAllowed { get; set; } = null!;
+
+        public override string ToString()
+        {
+            return PlayerName;
+        }
     }
 }
