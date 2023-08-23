@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,11 +28,6 @@ namespace DataDrivenDungeon.Models
         public string PlayerName { get; set; } = null!;
 
         /// <summary>
-        /// The inventory's unique identifier
-        /// </summary>
-        public int InventoryId { get; set; }
-
-        /// <summary>
         /// The player's current weapon
         /// </summary>
         public Weapon CurrentWeapon { get; set; } = null!;
@@ -50,5 +46,10 @@ namespace DataDrivenDungeon.Models
         /// The highest level dungeon the player may enter
         /// </summary>
         public Dungeon HighestDungeonAllowed { get; set; } = null!;
+
+        public override string ToString()
+        {
+            return PlayerName;
+        }
     }
 }
