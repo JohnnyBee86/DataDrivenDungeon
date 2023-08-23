@@ -41,6 +41,13 @@ namespace DataDrivenDungeon.Models
             return context.Creatures.Where(creature => creature.CreatureId == id).Single();
         }
 
+        /// <summary>
+        /// Increases the number of items in a given inventory
+        /// </summary>
+        /// <param name="inventoryId">The id of the inventory you want to change</param>
+        /// <param name="item">The name of the item that you want to add. It should be
+        /// a single word with the first letter being capitalized</param>
+        /// <param name="context">The Database context</param>
         public static void AddToInventory(int inventoryId, string item, GameContext context)
         {
             Inventory inventory = GetInventory(inventoryId, context);
@@ -64,6 +71,43 @@ namespace DataDrivenDungeon.Models
                 context.GameInventory.Update(inventory);
                 context.SaveChanges();
                 MessageBox.Show("A Coin was added to your inventory");
+            }
+            else
+            {
+                MessageBox.Show($"{item} is not a real item.");
+            }
+        }
+
+        /// <summary>
+        /// Removes an item from the given inventory
+        /// </summary>
+        /// <param name="inventoryId">The id of the inventory you want to change</param>
+        /// <param name="item">The name of the item that you want to add. It should be
+        /// a single word with the first letter being capitalized</param>
+        /// <param name="context">The Database context<param>
+        public static void RemoveFromInventory(int inventoryId, string item, GameContext context)
+        {
+            Inventory inventory = GetInventory(inventoryId, context);
+            if (item.Equals("Fireball"))
+            {
+                inventory.Fireballs--;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Fireball was removed to your inventory");
+            }
+            else if (item.Equals("Potion"))
+            {
+                inventory.Fireballs--;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Potion was removed to your inventory");
+            }
+            else if (item.Equals("Coins"))
+            {
+                inventory.Coins--;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Coin was removed to your inventory");
             }
             else
             {
