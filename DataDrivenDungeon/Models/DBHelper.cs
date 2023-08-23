@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,34 +11,34 @@ namespace DataDrivenDungeon.Models
     public class DBHelper
     {
         // gets
-        public Weapon GetWeapon(int id, GameContext context)
+        public static Weapon GetWeapon(int id, GameContext context)
         {
-            return context.Weapons.Find(id);
+            return context.Weapons.Where(w => w.WeaponId == id).Single();
         }
 
-        public Armor GetArmor(int id, GameContext context)
+        public static Armor GetArmor(int id, GameContext context)
         {
-            return context.Armors.Find(id);
+            return context.Armors.Where(w => w.ArmorId == id).Single();
         }
 
-        public GameData GetGameData(int id, GameContext context)
+        public static GameData GetGameData(int id, GameContext context)
         {
-            return context.Game.Find(id);
+            return context.Game.Where(w => w.GameId == id).Single();
         }
 
-        public Inventory GetInventory(int id, GameContext context)
+        public static Inventory GetInventory(int id, GameContext context)
         {
-            return context.GameInventory.Find(id);
+            return context.GameInventory.Where(w => w.InventoryId == id).Single();
         }
 
-        public Dungeon GetDungeon(int id, GameContext context)
+        public static Dungeon GetDungeon(int id, GameContext context)
         {
-            return context.Dungeons.Find(id);
+            return context.Dungeons.Where(w => w.DungeonId == id).Single();
         }
 
-        public Creature GetCreature(int id, GameContext context)
+        public static Creature GetCreature(int id, GameContext context)
         {
-            return context.Creatures.Find(id);
+            return context.Creatures.Where(w => w.CreatureId == id).Single();
         }
     }
 }
