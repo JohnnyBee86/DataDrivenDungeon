@@ -13,7 +13,7 @@ namespace DataDrivenDungeon.Models
     public class Inventory
     {
         /// <summary>
-        /// The inventories unique identifier
+        /// The inventory's unique identifier
         /// </summary>
         [Key]
         public int InventoryId { get; set; }
@@ -21,7 +21,7 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// The game the inventory belongs to
         /// </summary>
-        public GameData SaveData { get; set; } = null!;
+        /*public GameData SaveData { get; set; } = null!;*/
 
         /// <summary>
         /// How much money the player is carrying
