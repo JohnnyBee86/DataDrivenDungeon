@@ -11,6 +11,12 @@ namespace DataDrivenDungeon.Models
     public class DBHelper
     {
         // gets
+        public static Weapon GetWeapon(GameData player, GameContext context)
+        {
+
+            Weapon w = context.Weapons.Where(w => w.WeaponId == player.CurrentWeapon.WeaponId).Single();
+            return w;
+        }
         public static Weapon GetWeapon(int id, GameContext context)
         {
             return context.Weapons.Where(weapon => weapon.WeaponId == id).Single();
