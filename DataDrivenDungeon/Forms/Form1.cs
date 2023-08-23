@@ -29,10 +29,10 @@ namespace DataDrivenDungeon
                 // make a new GameContext and GameData
                 GameData newPlayer = new();
                 newPlayer.PlayerName = PlayerNameTxt.Text;
-                newPlayer.PlayerHealth = 25;
-                newPlayer.CurrentWeapon = new() { WeaponName = "Dagger" };
-                newPlayer.CurrentArmor = new() { ArmorName = "T-Shirt" };
-                newPlayer.HighestDungeonAllowed = new() { DungeonName = "Helhigm" };
+                newPlayer.PlayerHealth = 0;
+                newPlayer.CurrentWeapon = _context.Weapons.First();
+                newPlayer.CurrentArmor = _context.Armors.First();
+                newPlayer.HighestDungeonAllowed = _context.Dungeons.First();
 
                 _context.Game.Add(newPlayer);
                 _context.SaveChanges();
