@@ -37,6 +37,12 @@ namespace DataDrivenDungeon
                 _context.Game.Add(newPlayer);
                 _context.SaveChanges();
 
+                Inventory newInventory = new();
+                newInventory.SaveData = newPlayer;
+
+                _context.GameInventory.Add(newInventory);
+                _context.SaveChanges();
+
                 // send the player to the hub world
                 HubForm hubForm = new HubForm(newPlayer);
                 hubForm.ShowDialog();
