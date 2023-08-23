@@ -1,4 +1,5 @@
-﻿using DataDrivenDungeon.Models;
+﻿using DataDrivenDungeon.Data;
+using DataDrivenDungeon.Models;
 using DataDrivenDungeon.Views;
 using System;
 using System.Collections.Generic;
@@ -16,14 +17,14 @@ namespace DataDrivenDungeon
 {
     public partial class HubForm : Form
     {
-        private GameData PLAYER = new GameData();
+        private GameData _player;
 
         /// <summary>
         /// The Hub World form that lets you go to the stores, the bank, and the dungeon.
         /// </summary>
         public HubForm(GameData player)
         {
-            PLAYER = player;
+            _player = player;
             InitializeComponent();
         }
 
@@ -35,7 +36,7 @@ namespace DataDrivenDungeon
         private void BankBtn_Click(object sender, EventArgs e)
         {
             // connect to the bank
-            BankForm bankForm = new BankForm(PLAYER);
+            BankForm bankForm = new BankForm(_player);
             bankForm.ShowDialog();
         }
 
@@ -47,7 +48,7 @@ namespace DataDrivenDungeon
         private void JackpotBtn_Click(object sender, EventArgs e)
         {
             // connect to the jackpot shop form
-            JackpotStoreForm jackpotStoreForm = new JackpotStoreForm(PLAYER);
+            JackpotStoreForm jackpotStoreForm = new JackpotStoreForm(_player);
             jackpotStoreForm.ShowDialog();
         }
 
@@ -59,7 +60,7 @@ namespace DataDrivenDungeon
         private void RepositoryBtn_Click(object sender, EventArgs e)
         {
             // connect to the repository shop form
-            RepositoryStoreForm repositoryStoreForm = new RepositoryStoreForm(PLAYER);
+            RepositoryStoreForm repositoryStoreForm = new RepositoryStoreForm(_player);
             repositoryStoreForm.ShowDialog();
         }
 
@@ -71,7 +72,7 @@ namespace DataDrivenDungeon
         private void SmithingBtn_Click(object sender, EventArgs e)
         {
             // connect to the smithing shop form
-            SmithingStoreForm smithingStoreForm = new SmithingStoreForm(PLAYER);
+            SmithingStoreForm smithingStoreForm = new SmithingStoreForm(_player);
             smithingStoreForm.ShowDialog();
         }
 
@@ -83,7 +84,7 @@ namespace DataDrivenDungeon
         private void DungeonBtn_Click(object sender, EventArgs e)
         {
             // connect to the dungeon form
-            DungeonForm dungeonForm = new DungeonForm(PLAYER);
+            DungeonForm dungeonForm = new DungeonForm(_player);
             dungeonForm.ShowDialog();
         }
 

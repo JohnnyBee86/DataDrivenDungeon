@@ -1,4 +1,6 @@
-﻿using DataDrivenDungeon.Models;
+﻿using DataDrivenDungeon.Data;
+using DataDrivenDungeon.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +15,16 @@ namespace DataDrivenDungeon
 {
     public partial class RepositoryStoreForm : Form
     {
-        private GameData PLAYER = new GameData();
+        private GameData _player = new GameData();
+        private readonly GameContext _context = new();
+
         /// <summary>
         /// This is the form for Renaldo's Repository, where you can buy magic items.
         /// The magic items show up in varying amounts every time you return to town.
         /// </summary>
         public RepositoryStoreForm(GameData player)
         {
-            PLAYER = player;
+            _player = player;
             InitializeComponent();
         }
 
