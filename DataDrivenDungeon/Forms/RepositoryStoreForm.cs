@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataDrivenDungeon.Data;
+using DataDrivenDungeon.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +15,16 @@ namespace DataDrivenDungeon
 {
     public partial class RepositoryStoreForm : Form
     {
+        private GameData _player;
+        private readonly GameContext _context = new();
+
         /// <summary>
         /// This is the form for Renaldo's Repository, where you can buy magic items.
         /// The magic items show up in varying amounts every time you return to town.
         /// </summary>
-        public RepositoryStoreForm()
+        public RepositoryStoreForm(GameData player)
         {
+            _player = player;
             InitializeComponent();
         }
 
@@ -28,8 +35,7 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void PotionBtn_Click(object sender, EventArgs e)
         {
-            // buy potions (random amount)
-            MessageBox.Show("You bought a potion.");
+            DBHelper.AddToInventory(_player.GameId, "Potion", _context);
         }
 
         /// <summary>
@@ -40,7 +46,7 @@ namespace DataDrivenDungeon
         private void FireBallBtn_Click(object sender, EventArgs e)
         {
             // buy fireballs (random amount)
-            MessageBox.Show("You bought a fireball.");
+            DBHelper.AddToInventory(_player.GameId, "Fireball", _context);
         }
 
         /// <summary>

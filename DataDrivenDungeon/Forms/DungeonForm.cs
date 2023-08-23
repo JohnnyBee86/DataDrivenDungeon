@@ -1,9 +1,13 @@
-﻿using System;
+﻿using DataDrivenDungeon.Data;
+using DataDrivenDungeon.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,9 +20,21 @@ namespace DataDrivenDungeon.Views
     /// </summary>
     public partial class DungeonForm : Form
     {
-        public DungeonForm()
+        private GameData PLAYER = new();
+        private GameContext _context = new();
+        private Weapon weapon;
+        private Armor armor;
+        private Inventory inventory;
+        private Dungeon dungeon;
+        public DungeonForm(GameData player)
         {
+            PLAYER = player;
+            weapon = DBHelper.GetWeapon(player, _context);
             InitializeComponent();
+        }
+        private void DungeonForm_Load(object sender, EventArgs e)
+        {
+            txtWeapon.Text = weapon.WeaponName;
         }
 
         /// <summary>
@@ -83,10 +99,11 @@ namespace DataDrivenDungeon.Views
             Close();
         }
 
-        private bool DoMonstersRemain() 
+        private bool DoMonstersRemain()
         {
             // after fight, pop up a MessageBox with the loot drops
             throw new NotImplementedException();
         }
+
     }
 }

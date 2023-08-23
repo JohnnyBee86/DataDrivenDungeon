@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DataDrivenDungeon.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -23,6 +25,11 @@ namespace DataDrivenDungeon.Models
         /// </summary>
         [StringLength(15, MinimumLength = 1)]
         public string PlayerName { get; set; } = null!;
+
+        /// <summary>
+        /// The inventory's unique identifier
+        /// </summary>
+        public int InventoryId { get; set; }
 
         /// <summary>
         /// The player's current weapon

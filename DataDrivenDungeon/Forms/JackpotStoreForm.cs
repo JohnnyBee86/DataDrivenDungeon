@@ -1,4 +1,7 @@
-﻿using System;
+﻿using DataDrivenDungeon.Data;
+using DataDrivenDungeon.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,12 +15,16 @@ namespace DataDrivenDungeon
 {
     public partial class JackpotStoreForm : Form
     {
+        private GameData _player = new GameData();
+        private readonly GameContext _context = new();
+
         /// <summary>
         /// This is the form for Jasper's Jackpot, the lottery store where you can trade
         /// Goblin Emblems for a chance at cool items.
         /// </summary>
-        public JackpotStoreForm()
+        public JackpotStoreForm(GameData player)
         {
+            _player = player;
             InitializeComponent();
         }
 

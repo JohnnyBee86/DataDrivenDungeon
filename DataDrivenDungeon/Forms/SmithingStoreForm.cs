@@ -1,4 +1,5 @@
-﻿using DataDrivenDungeon.Models;
+﻿using DataDrivenDungeon.Data;
+using DataDrivenDungeon.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,12 +14,15 @@ namespace DataDrivenDungeon
 {
     public partial class SmithingStoreForm : Form
     {
+        private readonly GameData _player;
+        private readonly GameContext _context = new();
         /// <summary>
         /// This is the form for Stanley's Smithing, a shop where you can buy weapons and armor,
         /// which you can gain access to better armor/weapons when you complete dungeon levels.
         /// </summary>
-        public SmithingStoreForm()
+        public SmithingStoreForm(GameData player)
         {
+            _player = player;
             InitializeComponent();
         }
 
@@ -49,12 +53,14 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void BuySwordBtn_Click(object sender, EventArgs e)
         {
-            // set the player's CurrentWeapon to the new weapon
+            int nextId = _player.CurrentWeapon.WeaponId + 1;
+            // get the next weapon for the player
+            Weapon nextWeapon = DBHelper.GetWeapon(nextId, _context);
 
-            // change the button to the next weapon
+            // make it the current weapon
+            _player.CurrentWeapon = nextWeapon;
 
-            // buy weapon (progression based)
-            MessageBox.Show($"You got a new weapon!");
+            MessageBox.Show("You got a new weapon!");
         }
 
         /// <summary>
@@ -64,11 +70,13 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void BuyArmorBtn_Click(object sender, EventArgs e)
         {
-            // set the player's CurrentArmor to the new armor
+            int nextId = _player.CurrentArmor.ArmorId + 1;
+            // get the next weapon for the player
+            Armor nextArmor = DBHelper.GetArmor(nextId, _context);
 
-            // change the button to the next armor
+            // make it the current weapon
+            _player.CurrentArmor = nextArmor;
 
-            // buy armor (progression based)
             MessageBox.Show("You got new armor!");
         }
 
