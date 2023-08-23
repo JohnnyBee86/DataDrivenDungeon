@@ -13,32 +13,62 @@ namespace DataDrivenDungeon.Models
         // gets
         public static Weapon GetWeapon(int id, GameContext context)
         {
-            return context.Weapons.Where(w => w.WeaponId == id).Single();
+            return context.Weapons.Where(weapon => weapon.WeaponId == id).Single();
         }
 
         public static Armor GetArmor(int id, GameContext context)
         {
-            return context.Armors.Where(w => w.ArmorId == id).Single();
+            return context.Armors.Where(armor => armor.ArmorId == id).Single();
         }
 
         public static GameData GetGameData(int id, GameContext context)
         {
-            return context.Game.Where(w => w.GameId == id).Single();
+            return context.Game.Where(gameData => gameData.GameId == id).Single();
         }
 
         public static Inventory GetInventory(int id, GameContext context)
         {
-            return context.GameInventory.Where(w => w.InventoryId == id).Single();
+            return context.GameInventory.Where(inventory => inventory.InventoryId == id).Single();
         }
 
         public static Dungeon GetDungeon(int id, GameContext context)
         {
-            return context.Dungeons.Where(w => w.DungeonId == id).Single();
+            return context.Dungeons.Where(dungeon => dungeon.DungeonId == id).Single();
         }
 
         public static Creature GetCreature(int id, GameContext context)
         {
-            return context.Creatures.Where(w => w.CreatureId == id).Single();
+            return context.Creatures.Where(creature => creature.CreatureId == id).Single();
+        }
+
+        public static void AddToInventory(int inventoryId, string item, GameContext context)
+        {
+            Inventory inventory = GetInventory(inventoryId, context);
+            if (item.Equals("Fireball"))
+            {
+                inventory.Fireballs++;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Fireball was added to your inventory");
+            } 
+            else if (item.Equals("Potion"))
+            {
+                inventory.Fireballs++;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Potion was added to your inventory");
+            }
+            else if (item.Equals("Coins"))
+            {
+                inventory.Coins++;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Coin was added to your inventory");
+            }
+            else
+            {
+                MessageBox.Show($"{item} is not a real item.");
+            }
         }
     }
 }
