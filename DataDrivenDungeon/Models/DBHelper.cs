@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataDrivenDungeon.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,34 +10,34 @@ namespace DataDrivenDungeon.Models
     public class DBHelper
     {
         // gets
-        public Weapon GetWeapon()
+        public Weapon GetWeapon(int id, GameContext context)
         {
-            throw new NotImplementedException();
+            return context.Weapons.Find(id);
         }
 
-        public Armor GetArmor()
+        public Armor GetArmor(int id, GameContext context)
         {
-            throw new NotImplementedException();
+            return context.Armors.Find(id);
         }
 
-        public GameData GetGameData()
+        public GameData GetGameData(int id, GameContext context)
         {
-            throw new NotImplementedException();
+            return context.Game.Find(id);
         }
 
-        public Inventory GetInventory()
+        public Inventory GetInventory(int id, GameContext context)
         {
-            throw new NotImplementedException();
+            return context.GameInventory.Find(id);
         }
 
-        public Dungeon GetDungeon()
+        public Dungeon GetDungeon(int id, GameContext context)
         {
-            throw new NotImplementedException();
+            return context.Dungeons.Find(id);
         }
 
-        public Creature GetCreature()
+        public Creature GetCreature(int id, GameContext context)
         {
-            throw new NotImplementedException();
+            return context.Creatures.Find(id);
         }
     }
 }
