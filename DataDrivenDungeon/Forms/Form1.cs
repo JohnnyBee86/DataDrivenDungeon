@@ -5,6 +5,7 @@ namespace DataDrivenDungeon
 {
     public partial class Form1 : Form
     {
+        private readonly GameContext _context = new();
 
         /// <summary>
         /// This is the start-up form for the game. Might possibly add the ability to enter a JSON
@@ -33,9 +34,8 @@ namespace DataDrivenDungeon
                 newPlayer.CurrentArmor = new() { ArmorName = "T-Shirt" };
                 newPlayer.HighestDungeonAllowed = new() { DungeonName = "Helhigm" };
 
-                GameContext newGame = new();
-                newGame.Game.Add(newPlayer);
-                newGame.SaveChanges();
+                _context.Game.Add(newPlayer);
+                _context.SaveChanges();
 
                 // send the player to the hub world
                 HubForm hubForm = new HubForm(newPlayer);
@@ -57,8 +57,8 @@ namespace DataDrivenDungeon
         private void Form1_Load(object sender, EventArgs e)
         {
             List<GameData> savedGames = new();
-            GameContext getSaved = new();
-            savedGames = getSaved.Game.ToList();
+            savedGames = _context.Game.ToList();
+            // "games" coming out of database with null FKs
             foreach (GameData game in savedGames)
             {
                 SavedGameslst.Items.Add(game);
