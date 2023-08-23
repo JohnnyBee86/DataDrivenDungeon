@@ -15,7 +15,7 @@ namespace DataDrivenDungeon
 {
     public partial class RepositoryStoreForm : Form
     {
-        private GameData _player = new GameData();
+        private GameData _player;
         private readonly GameContext _context = new();
 
         /// <summary>
@@ -35,8 +35,7 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void PotionBtn_Click(object sender, EventArgs e)
         {
-            // buy potions (random amount)
-            MessageBox.Show("You bought a potion.");
+            DBHelper.AddToInventory(_player.GameId, "Potion", _context);
         }
 
         /// <summary>
@@ -47,7 +46,7 @@ namespace DataDrivenDungeon
         private void FireBallBtn_Click(object sender, EventArgs e)
         {
             // buy fireballs (random amount)
-            MessageBox.Show("You bought a fireball.");
+            DBHelper.AddToInventory(_player.GameId, "Fireball", _context);
         }
 
         /// <summary>

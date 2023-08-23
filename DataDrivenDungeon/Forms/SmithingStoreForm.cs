@@ -50,7 +50,13 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void BuyArmorBtn_Click(object sender, EventArgs e)
         {
-            // buy armor (progression based)
+            int nextId = _player.CurrentArmor.ArmorId + 1;
+            // get the next weapon for the player
+            Armor nextArmor = DBHelper.GetArmor(nextId, _context);
+
+            // make it the current weapon
+            _player.CurrentArmor = nextArmor;
+
             MessageBox.Show("You got new armor!");
         }
 
