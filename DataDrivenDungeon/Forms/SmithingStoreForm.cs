@@ -1,4 +1,5 @@
-﻿using DataDrivenDungeon.Models;
+﻿using DataDrivenDungeon.Data;
+using DataDrivenDungeon.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,14 +14,15 @@ namespace DataDrivenDungeon
 {
     public partial class SmithingStoreForm : Form
     {
-        private GameData PLAYER = new GameData();
+        private readonly GameData _player;
+        private readonly GameContext _context = new();
         /// <summary>
         /// This is the form for Stanley's Smithing, a shop where you can buy weapons and armor,
         /// which you can gain access to better armor/weapons when you complete dungeon levels.
         /// </summary>
         public SmithingStoreForm(GameData player)
         {
-            PLAYER = player;
+            _player = player;
             InitializeComponent();
         }
 
@@ -31,7 +33,13 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void BuySwordBtn_Click(object sender, EventArgs e)
         {
-            // buy weapon (progression based)
+            int nextId = _player.CurrentWeapon.WeaponId + 1;
+            // get the next weapon for the player
+            Weapon nextWeapon = DBHelper.GetWeapon(nextId, _context);
+
+            // make it the current weapon
+            _player.CurrentWeapon = nextWeapon;
+
             MessageBox.Show("You got a new weapon!");
         }
 
@@ -42,7 +50,13 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void BuyArmorBtn_Click(object sender, EventArgs e)
         {
-            // buy armor (progression based)
+            int nextId = _player.CurrentArmor.ArmorId + 1;
+            // get the next weapon for the player
+            Armor nextArmor = DBHelper.GetArmor(nextId, _context);
+
+            // make it the current weapon
+            _player.CurrentArmor = nextArmor;
+
             MessageBox.Show("You got new armor!");
         }
 

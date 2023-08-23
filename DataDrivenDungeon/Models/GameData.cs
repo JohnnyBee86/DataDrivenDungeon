@@ -27,6 +27,11 @@ namespace DataDrivenDungeon.Models
         public string PlayerName { get; set; } = null!;
 
         /// <summary>
+        /// The inventory's unique identifier
+        /// </summary>
+        public int InventoryId { get; set; }
+
+        /// <summary>
         /// The player's current weapon
         /// </summary>
         public Weapon CurrentWeapon { get; set; } = null!;
