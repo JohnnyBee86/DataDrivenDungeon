@@ -1,5 +1,6 @@
 using DataDrivenDungeon.Data;
 using DataDrivenDungeon.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataDrivenDungeon
 {
@@ -63,7 +64,9 @@ namespace DataDrivenDungeon
         private void Form1_Load(object sender, EventArgs e)
         {
             List<GameData> savedGames = new();
-            savedGames = _context.Game.ToList();
+            savedGames = _context.Game.Include(game => game.CurrentWeapon)
+                        .Include(game => game.CurrentArmor)
+                        .Include(game => game.HighestDungeonAllowed).ToList();
             // "games" coming out of database with null FKs
             foreach (GameData game in savedGames)
             {
