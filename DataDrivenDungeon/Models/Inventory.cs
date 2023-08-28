@@ -13,7 +13,7 @@ namespace DataDrivenDungeon.Models
     public class Inventory
     {
         /// <summary>
-        /// The inventories unique identifier
+        /// The inventory's unique identifier
         /// </summary>
         [Key]
         public int InventoryId { get; set; }

@@ -19,60 +19,120 @@ namespace DataDrivenDungeon.Models
         /// <returns>The current weapon object</returns>
         public static Weapon GetWeapon(GameData player, GameContext context)
         {
+
             Weapon w = context.Weapons.Where(w => w.WeaponId == player.CurrentWeapon.WeaponId).Single();
             return w;
         }
-
-        /// <summary>
-        /// Gets the player's current armor
-        /// </summary>
-        /// <param name="player"></param>
-        /// <param name="context"></param>
-        /// <returns>The current weapon object</returns>
-        public static Armor GetArmor(GameData player, GameContext context)
+        public static Weapon GetWeapon(int id, GameContext context)
         {
-            Armor a = context.Armors.Where(a => a.ArmorId == player.CurrentArmor.ArmorId).Single();
-            return a;
+            return context.Weapons.Where(weapon => weapon.WeaponId == id).Single();
         }
 
-        public GameData GetGameData()
+        public static Armor GetArmor(int id, GameContext context)
         {
-            throw new NotImplementedException();
+            return context.Armors.Where(armor => armor.ArmorId == id).Single();
         }
 
-        /// <summary>
-        /// Gets the player's current inventory
-        /// </summary>
-        /// <param name="player"></param>
-        /// <param name="context"></param>
-        /// <returns>The current inventory object</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public static Inventory GetInventory(GameData player, GameContext context)
+        public static GameData GetGameData(int id, GameContext context)
         {
-            Inventory i = context.GameInventory.Where(i => i.SaveData.GameId == player.GameId).Single();
-            return i;
+            return context.Game.Where(gameData => gameData.GameId == id).Single();
         }
 
-        /// <summary>
-        /// Gets the dungeon the player is allowed in
-        /// </summary>
-        /// <param name="player"></param>
-        /// <param name="context"></param>
-        /// <returns>The current dungeon object</returns>
-        public static Dungeon GetDungeon(GameData player, GameContext context)
+        public static Inventory GetInventory(int id, GameContext context)
         {
-            Dungeon d = context.Dungeons.Where(d => d.DungeonId == player.HighestDungeonAllowed.DungeonId).Single();
-            return d;
+            return context.GameInventory.Where(inventory => inventory.InventoryId == id).Single();
+        }
+
+        public static Dungeon GetDungeon(int id, GameContext context)
+        {
+            return context.Dungeons.Where(dungeon => dungeon.DungeonId == id).Single();
+        }
+
+        public static Creature GetCreature(int id, GameContext context)
+        {
+            return context.Creatures.Where(creature => creature.CreatureId == id).Single();
+        }
+
+        public static List<GameData> GetPlayers(GameContext context)
+        {
+            List<GameData> savedGames = context.Game.Include(game => game.CurrentWeapon)
+                        .Include(game => game.CurrentArmor)
+                        .Include(game => game.HighestDungeonAllowed).ToList();
+            return savedGames;
         }
 
         /// <summary>
-        /// Gets a creature from the current dungeon
+        /// Increases the number of items in a given inventory
         /// </summary>
-        /// <returns>A creature object</returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public Creature GetCreature()
+        /// <param name="inventoryId">The id of the inventory you want to change</param>
+        /// <param name="item">The name of the item that you want to add. It should be
+        /// a single word with the first letter being capitalized</param>
+        /// <param name="context">The Database context</param>
+        public static void AddToInventory(int inventoryId, string item, GameContext context)
         {
-            throw new NotImplementedException();
+            Inventory inventory = GetInventory(inventoryId, context);
+            if (item.Equals("Fireball"))
+            {
+                inventory.Fireballs++;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Fireball was added to your inventory");
+            } 
+            else if (item.Equals("Potion"))
+            {
+                inventory.Fireballs++;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Potion was added to your inventory");
+            }
+            else if (item.Equals("Coins"))
+            {
+                inventory.Coins++;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Coin was added to your inventory");
+            }
+            else
+            {
+                MessageBox.Show($"{item} is not a real item.");
+            }
+        }
+
+        /// <summary>
+        /// Removes an item from the given inventory
+        /// </summary>
+        /// <param name="inventoryId">The id of the inventory you want to change</param>
+        /// <param name="item">The name of the item that you want to add. It should be
+        /// a single word with the first letter being capitalized</param>
+        /// <param name="context">The Database context<param>
+        public static void RemoveFromInventory(int inventoryId, string item, GameContext context)
+        {
+            Inventory inventory = GetInventory(inventoryId, context);
+            if (item.Equals("Fireball"))
+            {
+                inventory.Fireballs--;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Fireball was removed to your inventory");
+            }
+            else if (item.Equals("Potion"))
+            {
+                inventory.Fireballs--;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Potion was removed to your inventory");
+            }
+            else if (item.Equals("Coins"))
+            {
+                inventory.Coins--;
+                context.GameInventory.Update(inventory);
+                context.SaveChanges();
+                MessageBox.Show("A Coin was removed to your inventory");
+            }
+            else
+            {
+                MessageBox.Show($"{item} is not a real item.");
+            }
         }
     }
 }

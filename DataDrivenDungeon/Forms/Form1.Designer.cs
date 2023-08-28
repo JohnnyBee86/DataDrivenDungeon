@@ -29,58 +29,98 @@
         private void InitializeComponent()
         {
             TitleLbl = new Label();
-            StartGameBtn = new Button();
+            NewGameBtn = new Button();
             PlayerNameTxt = new TextBox();
             PlayerNameLbl = new Label();
+            label1 = new Label();
+            SavedGameslst = new ListBox();
+            LoadGamebtn = new Button();
             SuspendLayout();
             // 
             // TitleLbl
             // 
             TitleLbl.AutoSize = true;
-            TitleLbl.Location = new Point(119, 34);
+            TitleLbl.Location = new Point(83, 20);
+            TitleLbl.Margin = new Padding(2, 0, 2, 0);
             TitleLbl.Name = "TitleLbl";
-            TitleLbl.Size = new Size(239, 25);
+            TitleLbl.Size = new Size(156, 15);
             TitleLbl.TabIndex = 0;
             TitleLbl.Text = "Data Driven Dungeon Delver";
             // 
-            // StartGameBtn
+            // NewGameBtn
             // 
-            StartGameBtn.Location = new Point(99, 142);
-            StartGameBtn.Name = "StartGameBtn";
-            StartGameBtn.Size = new Size(293, 68);
-            StartGameBtn.TabIndex = 1;
-            StartGameBtn.Text = "Start Game";
-            StartGameBtn.UseVisualStyleBackColor = true;
-            StartGameBtn.Click += StartGameBtn_Click;
+            NewGameBtn.Location = new Point(69, 85);
+            NewGameBtn.Margin = new Padding(2);
+            NewGameBtn.Name = "NewGameBtn";
+            NewGameBtn.Size = new Size(205, 41);
+            NewGameBtn.TabIndex = 1;
+            NewGameBtn.Text = "New Game";
+            NewGameBtn.UseVisualStyleBackColor = true;
+            NewGameBtn.Click += NewGameBtn_Click;
             // 
             // PlayerNameTxt
             // 
-            PlayerNameTxt.Location = new Point(209, 85);
+            PlayerNameTxt.Location = new Point(146, 51);
+            PlayerNameTxt.Margin = new Padding(2);
             PlayerNameTxt.MaxLength = 15;
             PlayerNameTxt.Name = "PlayerNameTxt";
-            PlayerNameTxt.Size = new Size(205, 31);
-            PlayerNameTxt.TabIndex = 2;
+            PlayerNameTxt.Size = new Size(145, 23);
+            PlayerNameTxt.TabIndex = 0;
             // 
             // PlayerNameLbl
             // 
             PlayerNameLbl.AutoSize = true;
-            PlayerNameLbl.Location = new Point(81, 88);
+            PlayerNameLbl.Location = new Point(57, 53);
+            PlayerNameLbl.Margin = new Padding(2, 0, 2, 0);
             PlayerNameLbl.Name = "PlayerNameLbl";
-            PlayerNameLbl.Size = new Size(115, 25);
+            PlayerNameLbl.Size = new Size(77, 15);
             PlayerNameLbl.TabIndex = 3;
             PlayerNameLbl.Text = "Player Name:";
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(127, 167);
+            label1.Name = "label1";
+            label1.Size = new Size(77, 15);
+            label1.TabIndex = 4;
+            label1.Text = "Saved Games";
+            // 
+            // SavedGameslst
+            // 
+            SavedGameslst.FormattingEnabled = true;
+            SavedGameslst.ItemHeight = 15;
+            SavedGameslst.Location = new Point(83, 197);
+            SavedGameslst.Name = "SavedGameslst";
+            SavedGameslst.Size = new Size(171, 94);
+            SavedGameslst.TabIndex = 2;
+            // 
+            // LoadGamebtn
+            // 
+            LoadGamebtn.Location = new Point(69, 323);
+            LoadGamebtn.Name = "LoadGamebtn";
+            LoadGamebtn.Size = new Size(205, 41);
+            LoadGamebtn.TabIndex = 3;
+            LoadGamebtn.Text = "Load Game";
+            LoadGamebtn.UseVisualStyleBackColor = true;
+            LoadGamebtn.Click += LoadGameBtn_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(491, 244);
+            ClientSize = new Size(344, 444);
+            Controls.Add(LoadGamebtn);
+            Controls.Add(SavedGameslst);
+            Controls.Add(label1);
             Controls.Add(PlayerNameLbl);
             Controls.Add(PlayerNameTxt);
-            Controls.Add(StartGameBtn);
+            Controls.Add(NewGameBtn);
             Controls.Add(TitleLbl);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Data Driven Dungeon Delver";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -88,8 +128,11 @@
         #endregion
 
         private Label TitleLbl;
-        private Button StartGameBtn;
+        private Button NewGameBtn;
         private TextBox PlayerNameTxt;
         private Label PlayerNameLbl;
+        private Label label1;
+        private ListBox SavedGameslst;
+        private Button LoadGamebtn;
     }
 }

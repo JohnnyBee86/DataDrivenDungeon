@@ -44,3 +44,7 @@
 	DBHelper methods
 	Inventory table problems
 	Added comments where applicable
+	Finished database model scripting, context class, connection string, and merged with main
+
+8/18 JB - 2 hrs
+	Started "Load Game" functionality
