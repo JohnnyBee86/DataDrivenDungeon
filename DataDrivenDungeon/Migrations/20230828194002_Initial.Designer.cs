@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataDrivenDungeon.Migrations
 {
     [DbContext(typeof(GameContext))]
-    [Migration("20230823211806_Secondary")]
-    partial class Secondary
+    [Migration("20230828194002_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -139,9 +139,6 @@ namespace DataDrivenDungeon.Migrations
                     b.Property<int>("HighestDungeonAllowedDungeonId")
                         .HasColumnType("int");
 
-                    b.Property<int>("InventoryId")
-                        .HasColumnType("int");
-
                     b.Property<short>("PlayerHealth")
                         .HasColumnType("smallint");
 
@@ -190,7 +187,12 @@ namespace DataDrivenDungeon.Migrations
                     b.Property<short>("Potions")
                         .HasColumnType("smallint");
 
+                    b.Property<int>("SaveDataGameId")
+                        .HasColumnType("int");
+
                     b.HasKey("InventoryId");
+
+                    b.HasIndex("SaveDataGameId");
 
                     b.ToTable("GameInventory");
                 });
@@ -257,6 +259,17 @@ namespace DataDrivenDungeon.Migrations
                     b.Navigation("CurrentWeapon");
 
                     b.Navigation("HighestDungeonAllowed");
+                });
+
+            modelBuilder.Entity("DataDrivenDungeon.Models.Inventory", b =>
+                {
+                    b.HasOne("DataDrivenDungeon.Models.GameData", "SaveData")
+                        .WithMany()
+                        .HasForeignKey("SaveDataGameId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SaveData");
                 });
 #pragma warning restore 612, 618
         }
