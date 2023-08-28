@@ -20,21 +20,65 @@ namespace DataDrivenDungeon.Views
     /// </summary>
     public partial class DungeonForm : Form
     {
+        /// <summary>
+        /// Field to hold the current player
+        /// </summary>
         private GameData PLAYER = new();
+
+        /// <summary>
+        /// Field to hold DbContext
+        /// </summary>
         private GameContext _context = new();
+
+        /// <summary>
+        /// Field to hold the current weapon
+        /// </summary>
         private Weapon weapon;
+
+        /// <summary>
+        /// Field to hold the current armor
+        /// </summary>
         private Armor armor;
+
+        /// <summary>
+        /// Field to hold the current inventory
+        /// </summary>
         private Inventory inventory;
+
+        ///<summary>
+        ///Field to hold the current dungeon
+        /// </summary>
         private Dungeon dungeon;
+
+        /// <summary>
+        /// Field to hold the player's health
+        /// </summary>
+        private int HP;
         public DungeonForm(GameData player)
         {
             PLAYER = player;
-            weapon = DBHelper.GetWeapon(player, _context);
+            weapon = DBHelper.GetWeapon(player.GameId, _context);
+            armor = DBHelper.GetArmor(player.GameId, _context);
+            HP = armor.ArmorHealthMax + player.PlayerHealth;
+            inventory = DBHelper.GetInventory(player.GameId, _context);
+            dungeon = DBHelper.GetDungeon(player.HighestDungeonAllowed.DungeonId, _context);
+
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Populates form with relevant data
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void DungeonForm_Load(object sender, EventArgs e)
         {
             txtWeapon.Text = weapon.WeaponName;
+            txtPlayerHealth.Text = HP.ToString();
+            txtFireballCnt.Text = inventory.Fireballs.ToString();
+            txtPotionCnt.Text = inventory.Potions.ToString();
+            txtMoney.Text = inventory.Coins.ToString();
+            MessageBox.Show($"You are entering the {dungeon.DungeonName}");
         }
 
         /// <summary>
@@ -95,10 +139,15 @@ namespace DataDrivenDungeon.Views
         private void RetreatBtn_Click(object sender, EventArgs e)
         {
             // run from fight, return to hub form
-            MessageBox.Show("You ran from the fight. (Wuss)");
+            MessageBox.Show("You retreat from this attempt.");
             Close();
         }
 
+        /// <summary>
+        /// Checks if monsters are still alive
+        /// </summary>
+        /// <returns>True if any monsters are still alive</returns>
+        /// <exception cref="NotImplementedException"></exception>
         private bool DoMonstersRemain()
         {
             // after fight, pop up a MessageBox with the loot drops

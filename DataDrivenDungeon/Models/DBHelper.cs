@@ -11,43 +11,77 @@ namespace DataDrivenDungeon.Models
 {
     public class DBHelper
     {
-        // gets
-        public static Weapon GetWeapon(GameData player, GameContext context)
-        {
-
-            Weapon w = context.Weapons.Where(w => w.WeaponId == player.CurrentWeapon.WeaponId).Single();
-            return w;
-        }
+        /// <summary>
+        /// Gets the players current weapon from the database
+        /// </summary>
+        /// <param name="id">The players gameId</param>
+        /// <param name="context">The DBContext</param>
+        /// <returns>The players current weapon</returns>
         public static Weapon GetWeapon(int id, GameContext context)
         {
             return context.Weapons.Where(weapon => weapon.WeaponId == id).Single();
         }
 
+        /// <summary>
+        /// Gets the players current armor from the database
+        /// </summary>
+        /// <param name="id">The players gameId</param>
+        /// <param name="context">The DBContext</param>
+        /// <returns>The players current armor</returns>
         public static Armor GetArmor(int id, GameContext context)
         {
             return context.Armors.Where(armor => armor.ArmorId == id).Single();
         }
 
+        /// <summary>
+        /// Gets the players game from the database
+        /// </summary>
+        /// <param name="id">The players gameId</param>
+        /// <param name="context">The DBContext</param>
+        /// <returns>The players game</returns>
         public static GameData GetGameData(int id, GameContext context)
         {
             return context.Game.Where(gameData => gameData.GameId == id).Single();
         }
 
+        /// <summary>
+        /// Gets the players current inventory from the database
+        /// </summary>
+        /// <param name="id">The players gameId</param>
+        /// <param name="context">The DBContext</param>
+        /// <returns>The players current inventory</returns>
         public static Inventory GetInventory(int id, GameContext context)
         {
             return context.GameInventory.Where(inventory => inventory.InventoryId == id).Single();
         }
 
+        /// <summary>
+        /// Gets the players current dungeon from the database
+        /// </summary>
+        /// <param name="id">The players current dungeon ID</param>
+        /// <param name="context">The DBContext</param>
+        /// <returns>The players current dungeon</returns>
         public static Dungeon GetDungeon(int id, GameContext context)
         {
             return context.Dungeons.Where(dungeon => dungeon.DungeonId == id).Single();
         }
 
+        /// <summary>
+        /// Gets a creature from the database
+        /// </summary>
+        /// <param name="id">The current dungeon id</param>
+        /// <param name="context">The DBContext</param>
+        /// <returns>A creature</returns>
         public static Creature GetCreature(int id, GameContext context)
         {
             return context.Creatures.Where(creature => creature.CreatureId == id).Single();
         }
 
+        /// <summary>
+        /// Gets all saved players from the database
+        /// </summary>
+        /// <param name="context">The DBContext</param>
+        /// <returns></returns>
         public static List<GameData> GetPlayers(GameContext context)
         {
             List<GameData> savedGames = context.Game.Include(game => game.CurrentWeapon)
