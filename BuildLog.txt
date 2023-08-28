@@ -48,3 +48,19 @@
 
 8/18 JB - 2 hrs
 	Started "Load Game" functionality
+
+8/23 JB - 2 hrs
+	Made script to load database with required game data
+	Completed Load Saved game functionality
+	Merged branches/closed issues for Seed data and Load Saved Game
+
+8/24 JB - 1 hr
+	Added 'Getting Started' section to README, with helpful screen-snips
+
+8/28 JB - 3 hrs
+	Deleted and remade Migration to replace a column in the database that was causing conflicts
+	Added documentation to the DBHelper model
+	Made changes to code in DungeonForm arguments to match parameters of code changed in DBHelper
+	Changed code in DBHelper AddToInventory and RemoveFromInventory so "Potions" effects potions
+		not fireballs in database
+	Merged these into main
