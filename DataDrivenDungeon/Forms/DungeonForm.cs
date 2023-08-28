@@ -57,11 +57,11 @@ namespace DataDrivenDungeon.Views
         public DungeonForm(GameData player)
         {
             PLAYER = player;
-            weapon = DBHelper.GetWeapon(player, _context);
-            armor = DBHelper.GetArmor(player, _context);
+            weapon = DBHelper.GetWeapon(player.GameId, _context);
+            armor = DBHelper.GetArmor(player.GameId, _context);
             HP = armor.ArmorHealthMax + player.PlayerHealth;
-            inventory = DBHelper.GetInventory(player, _context);
-            dungeon = DBHelper.GetDungeon(player, _context);
+            inventory = DBHelper.GetInventory(player.GameId, _context);
+            dungeon = DBHelper.GetDungeon(player.GameId, _context);
 
             InitializeComponent();
         }
@@ -77,7 +77,8 @@ namespace DataDrivenDungeon.Views
             txtPlayerHealth.Text = HP.ToString();
             txtFireballCnt.Text = inventory.Fireballs.ToString();
             txtPotionCnt.Text = inventory.Potions.ToString();
-            MessageBox.Show(dungeon.DungeonName); // pop up to show dungeon being retrieved
+            txtMoney.Text = inventory.Coins.ToString();
+            MessageBox.Show($"You are entering the {dungeon.DungeonName}");
         }
 
         /// <summary>
