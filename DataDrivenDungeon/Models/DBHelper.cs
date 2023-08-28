@@ -1,4 +1,5 @@
 ﻿using DataDrivenDungeon.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,6 +46,14 @@ namespace DataDrivenDungeon.Models
         public static Creature GetCreature(int id, GameContext context)
         {
             return context.Creatures.Where(creature => creature.CreatureId == id).Single();
+        }
+
+        public static List<GameData> GetPlayers(GameContext context)
+        {
+            List<GameData> savedGames = context.Game.Include(game => game.CurrentWeapon)
+                        .Include(game => game.CurrentArmor)
+                        .Include(game => game.HighestDungeonAllowed).ToList();
+            return savedGames;
         }
 
         /// <summary>
