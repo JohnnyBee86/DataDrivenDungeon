@@ -146,7 +146,7 @@ namespace DataDrivenDungeon.Models
             }
             else if (item.Equals("Potion"))
             {
-                inventory.Fireballs--;
+                inventory.Potions--;
                 context.GameInventory.Update(inventory);
                 context.SaveChanges();
                 MessageBox.Show("A Potion was removed to your inventory");
