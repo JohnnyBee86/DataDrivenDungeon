@@ -43,7 +43,7 @@ namespace DataDrivenDungeon.Views
         /// <summary>
         /// Field to hold the current inventory
         /// </summary>
-        //private Inventory inventory;
+        private Inventory inventory;
 
         ///<summary>
         ///Field to hold the current dungeon
@@ -60,7 +60,7 @@ namespace DataDrivenDungeon.Views
             weapon = DBHelper.GetWeapon(player, _context);
             armor = DBHelper.GetArmor(player, _context);
             HP = armor.ArmorHealthMax + player.PlayerHealth;
-            //inventory = DBHelper.GetInventory(player, _context);
+            inventory = DBHelper.GetInventory(player, _context);
             dungeon = DBHelper.GetDungeon(player, _context);
 
             InitializeComponent();
@@ -75,8 +75,8 @@ namespace DataDrivenDungeon.Views
         {
             txtWeapon.Text = weapon.WeaponName;
             txtPlayerHealth.Text = HP.ToString();
-            //txtFireballCnt.Text = inventory.Fireballs.ToString();
-            //txtPotionCnt.Text = inventory.Potions.ToString();
+            txtFireballCnt.Text = inventory.Fireballs.ToString();
+            txtPotionCnt.Text = inventory.Potions.ToString();
             MessageBox.Show(dungeon.DungeonName); // pop up to show dungeon being retrieved
         }
 
