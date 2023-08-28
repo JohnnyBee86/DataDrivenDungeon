@@ -58,7 +58,7 @@ namespace DataDrivenDungeon.Models
         /// <summary>
         /// Gets the players current dungeon from the database
         /// </summary>
-        /// <param name="id">The players gameId</param>
+        /// <param name="id">The players current dungeon ID</param>
         /// <param name="context">The DBContext</param>
         /// <returns>The players current dungeon</returns>
         public static Dungeon GetDungeon(int id, GameContext context)

@@ -61,7 +61,7 @@ namespace DataDrivenDungeon.Views
             armor = DBHelper.GetArmor(player.GameId, _context);
             HP = armor.ArmorHealthMax + player.PlayerHealth;
             inventory = DBHelper.GetInventory(player.GameId, _context);
-            dungeon = DBHelper.GetDungeon(player.GameId, _context);
+            dungeon = DBHelper.GetDungeon(player.HighestDungeonAllowed.DungeonId, _context);
 
             InitializeComponent();
         }
@@ -139,7 +139,7 @@ namespace DataDrivenDungeon.Views
         private void RetreatBtn_Click(object sender, EventArgs e)
         {
             // run from fight, return to hub form
-            MessageBox.Show("You ran from the fight. (Wuss)");
+            MessageBox.Show("You retreat from this attempt.");
             Close();
         }
 
