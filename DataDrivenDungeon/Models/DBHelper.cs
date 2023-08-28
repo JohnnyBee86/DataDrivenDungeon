@@ -52,7 +52,7 @@ namespace DataDrivenDungeon.Models
         /// <returns>The players current inventory</returns>
         public static Inventory GetInventory(int id, GameContext context)
         {
-            return context.GameInventory.Where(inventory => inventory.InventoryId == id).Single();
+            return context.GameInventory.Where(inventory => inventory.SaveData.GameId == id).Single();
         }
 
         /// <summary>

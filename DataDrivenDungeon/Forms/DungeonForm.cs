@@ -57,8 +57,8 @@ namespace DataDrivenDungeon.Views
         public DungeonForm(GameData player)
         {
             PLAYER = player;
-            weapon = DBHelper.GetWeapon(player.GameId, _context);
-            armor = DBHelper.GetArmor(player.GameId, _context);
+            weapon = DBHelper.GetWeapon(player.CurrentWeapon.WeaponId, _context);
+            armor = DBHelper.GetArmor(player.CurrentArmor.ArmorId, _context);
             HP = armor.ArmorHealthMax + player.PlayerHealth;
             inventory = DBHelper.GetInventory(player.GameId, _context);
             dungeon = DBHelper.GetDungeon(player.HighestDungeonAllowed.DungeonId, _context);
