@@ -1,5 +1,6 @@
 using DataDrivenDungeon.Data;
 using DataDrivenDungeon.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace DataDrivenDungeon
 {
@@ -62,9 +63,7 @@ namespace DataDrivenDungeon
         /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
-            List<GameData> savedGames = new();
-            savedGames = _context.Game.ToList();
-            // "games" coming out of database with null FKs
+            List<GameData> savedGames = DBHelper.GetPlayers(_context);
             foreach (GameData game in savedGames)
             {
                 SavedGameslst.Items.Add(game);
